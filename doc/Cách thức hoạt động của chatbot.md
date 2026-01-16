@@ -1,0 +1,81 @@
+# 2. Cách thức hoạt động của chatbot
+
+## 2.1. Tổng quan luồng hoạt động của chatbot:
+
+Về cơ bản, một chatbot AI hoạt động theo một **pipeline xử lý (luồng xử lý)** gồm nhiều bước liên tiếp.  Mỗi bước đảm nhiệm một vai trò riêng, giúp chatbot có thể **hiểu câu hỏi của người dùng và tạo ra câu trả lời phù hợp**.
+
+Luồng hoạt động tổng quát của chatbot AI được minh họa trong **Hình 2.1** và có thể mô tả theo các bước sau:
+
+<figure>
+  <img src="Pasted image 20260116172851.png" alt="Luồng hoạt động của chatbot AI">
+  <figcaption><em>Hình 2.1: Luồng xử lý cơ bản của một chatbot AI.</em></figcaption>
+</figure>
+### 🔹 Bước 1: Người dùng nhập dữ liệu (Input from a user)
+
+Quá trình bắt đầu khi **người dùng nhập câu hỏi hoặc yêu cầu** cho chatbot.  
+
+Dữ liệu đầu vào này thường ở các dạng sau:
+- **Văn bản** (người dùng gõ câu hỏi)
+- **Giọng nói** (đối với các trợ lý ảo như Google Assistant, Siri)
+
+**Ví dụ:**
+> “Thời tiết hôm nay thế nào?”  
+> “Tôi muốn đặt lịch hẹn”
+
+Ở bước này, chatbot **chưa hiểu nội dung câu hỏi**, mà chỉ tiếp nhận dữ liệu thô từ người dùng.
+### 🔹 Bước 2: Phân tích yêu cầu của người dùng (Analyze user’s request)
+
+Sau khi nhận dữ liệu đầu vào, chatbot tiến hành **phân tích câu hỏi** bằng các kỹ thuật xử lý ngôn ngữ tự nhiên (NLP).  
+
+Mục tiêu của bước này bao gồm:
+- Làm sạch câu chữ
+- Tách từ
+- Chuẩn hóa ngôn ngữ
+- Giảm nhiễu do lỗi chính tả hoặc cách diễn đạt khác nhau
+
+**Ví dụ:**
+> “Cho mình hỏi hôm nay trời có mưa không?”
+
+=> Câu hỏi được phân tích thành một yêu cầu về **thời tiết**, với thông tin chính là **hôm nay – mưa**.
+### 🔹 Bước 3: Nhận diện ý định và thực thể (Identify intent and entities)
+
+Ở bước này, chatbot xác định hai thành phần quan trọng:
+- **Ý định (Intent):** người dùng muốn làm gì?
+- **Thực thể (Entities):** các thông tin quan trọng xuất hiện trong câu hỏi
+
+**Ví dụ:**
+
+| Thành phần | Giá trị                 |
+| ---------- | ----------------------- |
+| Intent     | Hỏi thông tin thời tiết |
+| Entities   | Thời gian: hôm nay      |
+Việc nhận diện đúng ý định và thực thể giúp chatbot **trả lời chính xác và đúng ngữ cảnh**, ngay cả khi người dùng diễn đạt theo nhiều cách khác nhau.
+### 🔹 Bước 4: Tạo câu trả lời (Compose reply)
+
+Dựa trên ý định đã xác định, chatbot tiến hành:
+- Truy vấn dữ liệu (nếu có)
+- Áp dụng các luật hoặc logic xử lý
+- Hoặc sử dụng mô hình AI để sinh câu trả lời
+Kết quả cuối cùng là một phản hồi **tự nhiên, dễ hiểu và phù hợp với ngữ cảnh**.
+
+**Ví dụ:**
+> “Hôm nay trời có mưa nhẹ vào buổi chiều, bạn nên mang theo áo mưa.”
+
+## 2.2. Phân loại chatbot và cách thức hoạt động của từng loại:
+
+Dựa trên cách xử lý và tạo phản hồi, chatbot có thể được chia thành **ba nhóm chính**:  
+**Rule-based chatbot**, **Retrieval-based chatbot** và **Generative chatbot**.  
+Mỗi loại chatbot có **cách thức hoạt động khác nhau**, mức độ thông minh và phạm vi ứng dụng khác nhau.
+### 2.2.1. Rule-based chatbot (Chatbot dựa trên luật):
+
+**Rule-based chatbot** hoạt động dựa trên một tập **luật và kịch bản được định nghĩa sẵn**.  
+Chatbot sử dụng các câu lệnh **IF–ELSE** hoặc **cây quyết định** để xác định câu trả lời phù hợp với đầu vào của người dùng.
+
+### 2.2.2. Retrieval-based chatbot (Chatbot truy xuất câu trả lời):
+
+**Retrieval-based chatbot** là chatbot sử dụng AI để **chọn ra câu trả lời phù hợp nhất** từ một tập dữ liệu có sẵn, thay vì chỉ dựa vào luật cứng. 
+Chatbot **không tự sinh câu mới**, mà **truy xuất câu trả lời gần nhất** trong cơ sở dữ liệu.
+### 2.2.3. Generative chatbot (Chatbot sinh nội dung):
+
+**Generative chatbot** là chatbot có khả năng **tự sinh câu trả lời mới**, thay vì chọn từ các câu có sẵn.  
+Loại chatbot này thường sử dụng **mô hình ngôn ngữ lớn (LLMs)**.
