@@ -21,6 +21,7 @@ Mặc dù có nhiều biến thể khác nhau, chatbot dựa trên truy xuất n
 
 Luồng này có thể được tóm tắt như sau:
 
+> **User → Preprocessing → Understanding → Retrieval → Response**
 
 Luồng hoạt động trên là khung xử lý chung cho mọi chatbot retrieval-based; sự khác biệt giữa các phương pháp chủ yếu nằm ở bước **Understanding**.
 
