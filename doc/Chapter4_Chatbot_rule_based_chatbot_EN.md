@@ -1,10 +1,12 @@
-# Rule-based Chatbot
+# Chapter 4 - Rule-based Chatbot
 
-## Concept
+## 4.1. Concept and how it works
+
+### Concept
 
 > ✏️ **Definition:** A chatbot that operates based on a predefined set of rules and scripted conversation flows.
 
-## How it works
+### How it works
 
 A rule-based chatbot works like a scripted **If–Then** structure: **If** the user says A, the chatbot replies B.
 
@@ -14,7 +16,7 @@ A rule-based chatbot works like a scripted **If–Then** structure: **If** the u
 - **Keyword-matching chatbot**: allows users to type their own questions, and the chatbot detects **keywords** in the input to return a matching response. However, it may give irrelevant answers if users express the same idea using different wording than the predefined keywords.
 - **Hybrid chatbot**: combines button/menu flows and keyword matching in one system, allowing businesses to leverage the strengths of both.
 
-### Information processing workflow
+## 4.2. Information processing workflow
 
 This workflow typically has 3 main steps:
 
@@ -30,7 +32,7 @@ Most rule-based chatbots guide users through a **decision tree**. Users are typi
 
 ![Illustration of the decision tree model](image%201.png)
 
-## Pros and cons
+## 4.3. Pros and cons
 
 ### Pros
 
@@ -53,7 +55,7 @@ Most rule-based chatbots guide users through a **decision tree**. Users are typi
 | Learning ability | No self-learning; manual updates required | Learns from data and interactions |
 | Flexibility | Low (very rigid) | High (understands intent, sentiment) |
 
-## How to build and improve a rule-based chatbot
+## 4.4. How to build and improve a rule-based chatbot
 
 ### How to build
 
