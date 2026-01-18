@@ -91,6 +91,7 @@ Trả về kết quả dưới dạng JSON object duy nhất theo mẫu:
   "issue_type": "string",
   "sentiment": "string"
 }
+```
 
 ---
 
@@ -142,16 +143,17 @@ AI: Negative
 [Câu hỏi thực tế cần xử lý]
 Khách: "Tuyệt vời, sẽ mua lại lần nữa."
 AI: [Mô hình sẽ tự động điền: Positive]
+```
 
 ---
-## 2. RAG (Retrieval‑Augmented Generation): Chatbot “Mở Sách”
+## 2. RAG (Retrieval‑Augmented Generation): Chatbot "Mở Sách"
 
 ### 2.1 Định nghĩa
 
-Trong mắt một **blogger công nghệ**, RAG không chỉ là một thuật ngữ mà là **công cụ biến LLM thành trợ lý có “bộ nhớ mở rộng”.**
+RAG không chỉ là một thuật ngữ mà là **công cụ biến LLM thành trợ lý có "bộ nhớ mở rộng".**
 
-- **LLM truyền thống**: Giống sinh viên thi cử chỉ dựa vào trí nhớ nội sinh – mọi kiến thức đã “đóng băng” tại thời điểm huấn luyện.
-- **RAG**: Cho phép sinh viên mang **sách giáo khoa** (External Knowledge Base) vào phòng thi, tra cứu ngay khi cần. Nhờ vậy chatbot có thể **truy xuất** thông tin thời gian thực, giảm thiểu hiện tượng “bịa đặt” (hallucination).
+- **LLM truyền thống**: Giống sinh viên thi cử chỉ dựa vào trí nhớ nội sinh – mọi kiến thức đã "đóng băng" tại thời điểm huấn luyện.
+- **RAG**: Cho phép sinh viên mang **sách giáo khoa** (External Knowledge Base) vào phòng thi, tra cứu ngay khi cần. Nhờ vậy chatbot có thể **truy xuất** thông tin thời gian thực, giảm thiểu hiện tượng "bịa đặt" (hallucination).
 
 ### 2.2 Kiến trúc pipeline kép
 
@@ -170,10 +172,10 @@ graph TD
 
 | Bước | Mô tả | Lưu ý |
 |------|-------|-------|
-| **Semantic Chunking** | Cắt tài liệu thành các *chunk* sao cho mỗi chunk chứa một ý tưởng hoàn chỉnh. | > [!IMPORTANT] “Garbage In, Garbage Out” – chất lượng câu trả lời phụ thuộc ~80 % vào bước này. |
-| **Naïve Chunking** | Cắt cố định mỗi 500 từ. | Rủi ro: cắt đôi câu quan trọng, mất ngữ cảnh. |
+| **Semantic Chunking** | Cắt tài liệu thành các *chunk* sao cho mỗi chunk chứa một ý tưởng hoàn chỉnh. | > [!IMPORTANT] "Garbage In, Garbage Out" – chất lượng câu trả lời phụ thuộc ~80 % vào bước này. |
+| **Naïve Chunking** | Cắt cố định mỗi 500 từ. | Rủi ro: cắt đôi câu quan trọng, mất ngữ cảnh. |
 | **Semantic Chunking (đề xuất)** | Dùng mô hình ngôn ngữ để phát hiện điểm kết thúc ý tưởng, giữ nguyên ngữ cảnh. | Hiện là chuẩn công nghiệp. |
-| **Embedding** | Biến mỗi chunk thành **vector** (dãy số) để máy tính “hiểu” ý nghĩa. | Ví dụ: vector của “Vua” gần vector của “Hoàng hậu”. |
+| **Embedding** | Biến mỗi chunk thành **vector** (dãy số) để máy tính "hiểu" ý nghĩa. | Ví dụ: vector của "Vua" gần vector của "Hoàng hậu". |
 | **Vector Database** | Lưu trữ các vector để **tìm kiếm nhanh** (milisecond). | Các giải pháp phổ biến: ChromaDB, Qdrant, Weaviate, Pinecone. |
 
 #### Luồng 2 – Inference (Suy luận – Runtime)
@@ -189,7 +191,7 @@ graph LR
 ```
 
 1. **Embedding** – Câu hỏi của người dùng được mã hoá thành vector.  
-2. **Hybrid Search** – Kết hợp **Vector Search** (tìm ngữ nghĩa) + **Sparse Search (BM25)** (khớp từ khóa) để giảm “blind spot”.  
+2. **Hybrid Search** – Kết hợp **Vector Search** (tìm ngữ nghĩa) + **Sparse Search (BM25)** (khớp từ khóa) để giảm "blind spot".  
 3. **Top‑50 Candidates** – Lấy 50 chunk có điểm tương đồng cao nhất.  
 4. **Reranker (Cross‑Encoder)** – Đánh giá lại từng *cặp câu hỏi‑đoạn*, chỉ giữ **Top‑3‑5** chất lượng nhất.  
 5. **LLM + Context** – Kết hợp các chunk đã chọn vào prompt, LLM sinh ra câu trả lời cuối cùng.
@@ -199,28 +201,29 @@ graph LR
 - **Vector Search** (Dense) mạnh trong việc **tìm ý nghĩa** (semantic similarity).  
 - **Sparse Search** (BM25) mạnh trong việc **khớp từ khóa** chính xác, đặc biệt với các chuỗi không ngữ nghĩa như mã SKU, số điện thoại.
 
-**Chiến lược:** Thực hiện **Hybrid Search**, hợp nhất điểm số, sau đó đưa vào **Reranker**. Cách này giảm đáng kể các “false negatives” khi chỉ dùng một trong hai phương pháp.
+**Chiến lược:** Thực hiện **Hybrid Search**, hợp nhất điểm số, sau đó đưa vào **Reranker**. Cách này giảm đáng kể các "false negatives" khi chỉ dùng một trong hai phương pháp.
 
-### 2.4 Re‑ranking – “Bộ lọc tinh túy”
+### 2.4 Re‑ranking – "Bộ lọc tinh túy"
 
-> [!NOTE] Re‑ranking là ranh giới giữa một **RAG “đồ chơi”** và một **RAG doanh nghiệp** thực thụ.
+> [!NOTE]
+> Re‑ranking là ranh giới giữa một **RAG "đồ chơi"** và một **RAG doanh nghiệp** thực thụ.
 
-- **Vấn đề:** Retrieval gốc trả về ~50 chunk, độ chính xác chỉ 60‑70 %.  
+- **Vấn đề:** Retrieval gốc trả về ~50 chunk, độ chính xác chỉ 60‑70 %.  
 - **Giải pháp:** Dùng **Cross‑Encoder** (được huấn luyện để đánh giá độ liên quan) để **chấm điểm lại** và chỉ giữ **Top‑3‑5** chunk.  
-- **Kết quả:** Độ chính xác tăng lên **90 %+**, đồng thời giảm tải cho LLM.
+- **Kết quả:** Độ chính xác tăng lên **90 %+**, đồng thời giảm tải cho LLM.
 
 ### 2.5 Query Rewriting – Viết lại câu hỏi
 
-Người dùng thường đưa ra câu hỏi ngắn gọn, thiếu ngữ cảnh (ví dụ: *“Ông ấy sinh năm bao nhiêu?”*).  
+Người dùng thường đưa ra câu hỏi ngắn gọn, thiếu ngữ cảnh (ví dụ: *"Ông ấy sinh năm bao nhiêu?"*).  
 
-**Cách khắc phục:** Trước khi tìm kiếm, dùng **LLM** để **rewrite** câu hỏi thành dạng đầy đủ (ví dụ: *“Tim Cook sinh năm bao nhiêu?”*). Điều này giúp Retrieval tìm đúng chunk và tránh “no‑result”.
+**Cách khắc phục:** Trước khi tìm kiếm, dùng **LLM** để **rewrite** câu hỏi thành dạng đầy đủ (ví dụ: *"Tim Cook sinh năm bao nhiêu?"*). Điều này giúp Retrieval tìm đúng chunk và tránh "no‑result".
 
 ### 2.6 Citations – Trích dẫn nguồn
 
 Yêu cầu chatbot **đưa ra nguồn** cho mỗi thông tin:
-> “Thông tin này lấy từ **Trang 15, Tài liệu Quy trình nhân sự**.”
+> "Thông tin này lấy từ **Trang 15, Tài liệu Quy trình nhân sự**."
 
-Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đáp ứng các yêu cầu pháp lý (GDPR, ISO 27001, …).
+Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đáp ứng các yêu cầu pháp lý (GDPR, ISO 27001, …).
 
 ### 2.7 Tech‑stack gợi ý
 
@@ -239,7 +242,7 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
 | **RAG** | • Kiến thức **thời gian thực** – chỉ cần upload tài liệu mới.<br>• Giảm **hallucination** – câu trả lời dựa trên nguồn thực tế.<br>• **Trích dẫn** rõ ràng → tăng độ tin cậy. | • **Tốc độ** – cần thời gian truy xuất + rerank.<br>• **Chi phí token** – truyền nhiều chunk vào prompt.<br>• **Công sức triển khai** – ingestion, embedding, DB, search, rerank. |
  
 ---
- ## 3. Fine‑tuning: Đào Tạo “Chuyên Gia” Thực Thụ
+ ## 3. Fine‑tuning: Đào Tạo "Chuyên Gia" Thực Thụ
  
  ### 3.1 Định nghĩa
  Fine‑tuning là quá trình **cập nhật trọng số** (weights) của một mô hình đã được huấn luyện trước (pre‑trained) bằng một tập dữ liệu **nhỏ, chuyên biệt**. Mục tiêu là thay đổi **hành vi** hoặc **cách diễn đạt** của mô hình sao cho phù hợp với ngữ cảnh, phong cách và nghiệp vụ cụ thể của doanh nghiệp.
@@ -251,7 +254,7 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
  | Tiêu chí | RAG | Fine‑tuning |
  |----------|-----|-------------|
  | **Giải quyết vấn đề** | Thiếu **kiến thức** (cập nhật dữ liệu) | Thiếu **kỹ năng / hành vi** (điều chỉnh cách phản hồi) |
- | **Ví dụ** | Bot không biết giá vàng hôm nay | Bot trả lời quá máy móc, không “giọng” thương hiệu |
+ | **Ví dụ** | Bot không biết giá vàng hôm nay | Bot trả lời quá máy móc, không "giọng" thương hiệu |
  | **Cập nhật dữ liệu** | **Tức thì** – chỉ cần upload file mới | **Phải train lại** – thời gian và tài nguyên cần thiết |
  | **Tốc độ phản hồi** | **Chậm** – cần thực hiện truy xuất + rerank | **Nhanh** – toàn bộ thông tin đã nằm trong mô hình |
  | **Chi phí token** | **Cao** – truyền nhiều chunk vào prompt | **Thấp** – chỉ gửi câu hỏi |
@@ -269,17 +272,17 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
  - Rủi ro **Catastrophic Forgetting** – mô hình quên kiến thức đã học.
  
  #### LoRA (Low‑Rank Adaptation – cách hiện đại)
- - **Nguyên lý “Sơn sửa nội thất”**: mô hình gốc là tòa nhà chọc trời (đóng băng), LoRA chỉ **sơn lại tường** và **thay nội thất** bằng các ma trận trọng số nhỏ (A, B).
- - Giảm **khối lượng tính toán tới 98 %** so với full fine‑tuning.
- - Có thể **train mô hình 7B** trên một GPU 24 GB VRAM (laptop gaming).
+ - **Nguyên lý "Sơn sửa nội thất"**: mô hình gốc là tòa nhà chọc trời (đóng băng), LoRA chỉ **sơn lại tường** và **thay nội thất** bằng các ma trận trọng số nhỏ (A, B).
+ - Giảm **khối lượng tính toán tới 98 %** so với full fine‑tuning.
+ - Có thể **train mô hình 7B** trên một GPU 24 GB VRAM (laptop gaming).
  
  #### QLoRA (Quantized LoRA)
  - Nén mô hình gốc xuống **4‑bit** trước khi áp dụng LoRA, giảm dung lượng bộ nhớ 4‑x.
- - Cho phép **đào tạo mô hình mở nguồn** ngay trên máy cá nhân, mở ra kỷ nguyên “AI tại nhà”.
+ - Cho phép **đào tạo mô hình mở nguồn** ngay trên máy cá nhân, mở ra kỷ nguyên "AI tại nhà".
  
  ### 3.4 Dữ liệu huấn luyện (Instruction Dataset)
  
- > **IMPORTANT** – **Chất lượng > Số lượng**. Một bộ **500‑1 000 mẫu “sạch”** (được kiểm duyệt kỹ) thường cho kết quả tốt hơn **100 000 mẫu rác**.
+ > **IMPORTANT** – **Chất lượng > Số lượng**. Một bộ **500‑1 000 mẫu "sạch"** (được kiểm duyệt kỹ) thường cho kết quả tốt hơn **100 000 mẫu rác**.
  
  #### Định dạng JSON (được mô hình hiểu ngay)
  
@@ -300,10 +303,10 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
  ### 3.5 Quy trình triển khai (Pipeline)
  1. **Chuẩn bị dữ liệu** – Thu thập lịch sử chat, tài liệu nội bộ; **clean** (loại bỏ lỗi, chuẩn hoá); chuyển sang **JSON/JSONL**.
  2. **Chọn Base Model** – Lựa chọn mô hình phù hợp:
-    - **Llama 3** (độ mạnh),
+    - **Llama 3** (độ mạnh),
     - **Mistral** (tốc độ),
     - **Qwen** (hỗ trợ tiếng Á).
- 3. **Training** – Sử dụng framework nhanh như **Unsloth**, **Axolotl**, hoặc **HuggingFace TRL**.
+ 3. **Training** – Sử dụng framework nhanh như **Unsloth**, **Axolotl**, hoặc **HuggingFace TRL**.
  4. **Theo dõi Loss** –
     - **Loss giảm đều** → ổn định,
     - **Loss tăng** → over‑fitting, cần giảm learning‑rate hoặc tăng dữ liệu.
@@ -313,12 +316,12 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
  
  |  | ✅ Ưu điểm | ❌ Nhược điểm |
  |---|----------|------------|
- | **Fine‑tuning** | • **Tốc độ suy luận cực nhanh** (không cần truy xuất).<br>• **Chi phí chạy thấp** (ít token).<br>• **Bảo mật tuyệt đối** – chạy offline 100 %.<br>• **Kiểm soát giọng văn** – đáp ứng phong cách thương hiệu. | • **Kiến thức “đóng băng”** tại thời điểm train – không cập nhật thông tin mới.<br>• **Ảo giác** nếu hỏi ngoài phạm vi dữ liệu huấn luyện.<br>• **Yêu cầu kỹ sư AI** có kinh nghiệm (điều chỉnh hyper‑parameters, quản lý data). |
+ | **Fine‑tuning** | • **Tốc độ suy luận cực nhanh** (không cần truy xuất).<br>• **Chi phí chạy thấp** (ít token).<br>• **Bảo mật tuyệt đối** – chạy offline 100 %.<br>• **Kiểm soát giọng văn** – đáp ứng phong cách thương hiệu. | • **Kiến thức "đóng băng"** tại thời điểm train – không cập nhật thông tin mới.<br>• **Ảo giác** nếu hỏi ngoài phạm vi dữ liệu huấn luyện.<br>• **Yêu cầu kỹ sư AI** có kinh nghiệm (điều chỉnh hyper‑parameters, quản lý data). |
  
  ---
  
  **Kết luận**
- Fine‑tuning là cách “đào tạo chuyên gia” cho LLM, cho phép doanh nghiệp **định hình hành vi, giọng điệu và độ chính xác** trong các tác vụ chuyên môn. Khi kết hợp với RAG (Hybrid), bạn có được **cả kiến thức thời gian thực** và **cách phản hồi chuẩn thương hiệu** – đây là cấu hình mạnh nhất hiện nay cho các chatbot doanh nghiệp.
+ Fine‑tuning là cách "đào tạo chuyên gia" cho LLM, cho phép doanh nghiệp **định hình hành vi, giọng điệu và độ chính xác** trong các tác vụ chuyên môn. Khi kết hợp với RAG (Hybrid), bạn có được **cả kiến thức thời gian thực** và **cách phản hồi chuẩn thương hiệu** – đây là cấu hình mạnh nhất hiện nay cho các chatbot doanh nghiệp.
  ---
 
 
@@ -337,7 +340,7 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
  3. **Planning (Lập kế hoạch)**: Chia một nhiệm vụ lớn (ví dụ *phân tích đối thủ*) thành **các sub‑task** có thể thực thi tuần tự hoặc song song.
  4. **Tools (Công cụ)**: Các giao diện thực thi thực tế – Google Search, Calculator, Python interpreter, API gửi email, truy vấn SQL, v.v.
  
- ### 4.3 Vòng lặp ReAct (Reason + Act)
+ ### 4.3 Vòng lặp ReAct (Reason + Act)
  
  ![Vòng lặp ReAct](../image/react_loop_diagram_1768567339824.png)
  
@@ -345,7 +348,7 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
  
  1. **Thought (Suy nghĩ)** – LLM suy nghĩ về yêu cầu, xác định cần công cụ nào. *Ví dụ*: "Người dùng hỏi thời tiết Hà Nội, mình cần dùng tool `get_weather`."
  2. **Action (Hành động)** – LLM xuất ra **JSON** mô tả lời gọi tool. 
- 3. **Observation (Quan sát)** – Hệ thống thực thi tool, trả về kết quả (ví dụ `25 °C, trời nắng`).
+ 3. **Observation (Quan sát)** – Hệ thống thực thi tool, trả về kết quả (ví dụ `25 °C, trời nắng`).
  4. **Reflection (Phản hồi)** – LLM đánh giá xem thông tin đã đủ chưa; nếu chưa, lặp lại vòng lặp.
  5. **Final Answer** – Khi đủ dữ liệu, LLM trả lời người dùng.
  
@@ -392,10 +395,7 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
  
  |  | ✅ Ưu điểm | ❌ Nhược điểm |
  |---|----------|------------|
- | **AI Agent** | • Giải quyết **bài toán đa bước**, phức tạp.<br>• Tự động **thực thi hành động thực tế** (gửi mail, đặt lịch, mua hàng).<br>• **Self‑correction** – khả năng tự sửa lỗi qua vòng lặp ReAct.<br>• Khả năng **tích hợp đa công cụ** (API, DB, web). | • **Chi phí token cao** – mỗi vòng ReAct tiêu tốn token.
- • **Độ trễ** – phản hồi thường mất **1‑2 phút** tùy độ phức tạp.
- • **Rủi ro vòng lặp vô tận** nếu không có **guardrails** (timeout, max‑steps).
- • Cần **kỹ sư AI** để thiết kế prompt, tool wrappers và giám sát.
+ | **AI Agent** | • Giải quyết **bài toán đa bước**, phức tạp.<br>• Tự động **thực thi hành động thực tế** (gửi mail, đặt lịch, mua hàng).<br>• **Self‑correction** – khả năng tự sửa lỗi qua vòng lặp ReAct.<br>• Khả năng **tích hợp đa công cụ** (API, DB, web). | • **Chi phí token cao** – mỗi vòng ReAct tiêu tốn token.<br>• **Độ trễ** – phản hồi thường mất **1‑2 phút** tùy độ phức tạp.<br>• **Rủi ro vòng lặp vô tận** nếu không có **guardrails** (timeout, max‑steps).<br>• Cần **kỹ sư AI** để thiết kế prompt, tool wrappers và giám sát. |
  
  ---
  
@@ -434,5 +434,3 @@ Việc này không chỉ tăng **độ tin cậy** (Trustworthy AI) mà còn đ�
 5. LangChain Documentation. (2024). "Building Production-Ready RAG Systems"
 
 ---
-
- 
