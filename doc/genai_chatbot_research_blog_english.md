@@ -38,7 +38,7 @@ Technically, when you input a prompt, you don't change any model parameters (wei
 
 To transform an LLM from a parrot into a business processing tool, don't chat randomly. Follow the **C-R-I-O** standard framework. This structure ensures output consistency.
 
-![C-R-I-O Framework](../image/crio_framework_diagram_1768567271314.png)
+![C-R-I-O Framework](../image/crio_framework_en_1768741081600.png)
 
 #### 1. **C - Context (Background/Foundation Data)**
 This is where you provide "raw materials" for the model to process. Context helps narrow the knowledge search scope, reducing hallucinations.
@@ -160,7 +160,7 @@ RAG is more than just a term—it's a **tool that transforms LLMs into assistant
 
 ### 2.2 Dual Pipeline Architecture
 
-![RAG Architecture](../image/rag_architecture_diagram_1768567299323.png)
+![RAG Architecture](../image/rag_architecture_en_1768741102390.png)
 
 RAG is divided into **two independent but closely coordinated pipelines**:
 
@@ -253,7 +253,7 @@ Fine-tuning is the process of **updating weights** of a pre-trained model using 
 
 ### 3.2 RAG vs Fine-tuning – When to Use What?
 
-![RAG vs Fine-tuning Comparison](../image/rag_vs_finetuning_comparison_1768567384572.png)
+![RAG vs Fine-tuning Comparison](../image/rag_vs_finetuning_en_1768741175068.png)
 
 | Criteria | RAG | Fine-tuning |
 |----------|-----|-------------|
@@ -268,7 +268,7 @@ Fine-tuning is the process of **updating weights** of a pre-trained model using 
 
 ### 3.3 PEFT & LoRA Revolution
 
-![LoRA Architecture](../image/lora_architecture_diagram_1768567318368.png)
+![LoRA Architecture](../image/lora_architecture_en_1768741126684.png)
 
 #### Full Fine-tuning (old method)
 - Updates **all** billions of parameters.
@@ -347,7 +347,7 @@ An effective Agent needs **four core components**:
 
 ### 4.3 ReAct Loop (Reason + Act)
 
-![ReAct Loop](../image/react_loop_diagram_1768567339824.png)
+![ReAct Loop](../image/react_loop_en_1768741149275.png)
 
 **ReAct Process** described in five steps:
 
@@ -376,7 +376,7 @@ Backend system (Python/NodeJS) **catches** this JSON, executes actual function, 
 
 ### 4.5 Multi-Agent Systems (2025 Trend)
 
-![Multi-Agent System](../image/multi_agent_system_diagram_1768567415400.png)
+![Multi-Agent System](../image/multi_agent_system_en_1768741197446.png)
 
 A single Agent often faces **overload problems** and **high error rates**. Current trend is building **virtual companies** with multiple specialized Agents, coordinated under **Manager Agent** direction:
 
@@ -406,7 +406,7 @@ Process **repeats** until **Reviewer** confirms correct results, creating a comp
 
 ## 5. Summary: Chatbot Needs Pyramid
 
-![Chatbot Needs Pyramid](../image/chatbot_pyramid_diagram_1768567361135.png)
+![Chatbot Needs Pyramid](../image/chatbot_pyramid_en_1768741221783.png)
 
 ### Decision Matrix
 
