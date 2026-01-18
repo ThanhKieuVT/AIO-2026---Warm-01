@@ -1,4 +1,4 @@
-# Đánh giá chất lượng Chatbot
+# Chương 3 - Đánh giá chất lượng Chatbot
 
 Bạn có bao giờ gặp trường hợp chatbot trả lời lúc đúng, lúc sai không ổn định? Hoặc chỉ cần thay đổi một chút prompt là chất lượng trả lời bị giảm đi. Đối với những chatbot ứng dụng RAG (Retrieval-Augmented Generation), có lúc chatbot tìm đúng thông tin, nhưng cũng có lúc lại tìm sai. Hay với các Tool/Function Calling chatbot, có thể bot gọi nhầm tool, sai tham số hoặc làm sai quy trình... Khi chúng ta làm chatbot, nếu chỉ thử qua loa với vài câu đơn giản mà không kiểm tra kỹ chất lượng của nó, chúng ta rất dễ gặp phải những vấn đề trên.
 
@@ -13,7 +13,7 @@ Mỗi cấp độ sẽ có các yếu tố đánh giá khác nhau, và càng lê
 
 ---
 
-## 1. Nguyên tắc đánh giá theo 3 lớp
+## 3.1. Nguyên tắc đánh giá theo 3 lớp
 
 Dưới đây là ba lớp đánh giá chính mà bạn cần hiểu và áp dụng khi làm việc với chatbot, đặc biệt là chatbot AI, giúp bạn có cái nhìn tổng quan và chi tiết hơn về chất lượng của chatbot.
 
@@ -78,9 +78,9 @@ Không chỉ chất lượng nội dung và độ tin cậy, chatbot còn cần 
 
 ---
 
-## 2. Level 1 — Chatbot cơ bản (Rule-based)
+## 3.2. Level 1 — Chatbot cơ bản (Rule-based)
 
-### 2.1. Scoring Rubric
+### 3.2.1. Scoring Rubric
 
 Thang đo Rubric (Assessment Rubric) là một công cụ đánh giá có cấu trúc, sử dụng các tiêu chí cụ thể và mức độ thực hiện rõ ràng để đo lường hiệu suất, kỹ năng hoặc năng lực của cá nhân trong tổ chức. Chúng ta có thể tạo một bảng đánh giá dựa trên thang đo này để giúp bạn phát triển hoặc kiểm tra chất lượng của chatbot một cách công bằng và nhất quán.
 
@@ -117,7 +117,7 @@ Các tiêu chí trong rubric này sẽ giúp bạn chấm điểm chatbot một 
 
 ---
 
-### 2.2. Bộ câu hỏi
+### 3.2.2. Bộ câu hỏi
 
 Thang đo và cách chấm điểm đã có, tiếp theo chúng ta cần tạo một bộ câu hỏi kiểm tra đa dạng. Số lượng câu hỏi càng nhiều, mức độ đa dạng và bao phủ càng lớn sẽ giúp nhận diện những điểm mạnh và điểm yếu của chatbot một cách rõ ràng hơn. Chúng ta nên chia bộ câu hỏi thành **4 nhóm** chính:
 
@@ -141,7 +141,7 @@ Thang đo và cách chấm điểm đã có, tiếp theo chúng ta cần tạo m
 
 ---
 
-## 3. Level 2 — Chatbot có Memory
+## 3.3. Level 2 — Chatbot có Memory
 
 Memory trong chatbot là khả năng lưu trữ và sử dụng lại thông tin từ các cuộc hội thoại trước để tạo ra trải nghiệm người dùng liền mạch và cá nhân hóa hơn. Tuy nhiên, việc sử dụng memory cũng mang đến một số thách thức mới:
 
@@ -151,7 +151,7 @@ Memory trong chatbot là khả năng lưu trữ và sử dụng lại thông tin
 
 Vậy nên, việc đánh giá **tính nhất quán** của chatbot trong việc sử dụng memory qua nhiều lượt hội thoại là cực kỳ quan trọng. Để đảm bảo chatbot hoạt động hiệu quả và cung cấp câu trả lời chính xác, bạn cần kiểm tra khả năng **cập nhật và chọn lọc thông tin** của nó.
 
-### **3.1. Các chỉ số cần đo cho Memory**
+### 3.3.1. Các chỉ số cần đo cho Memory
 
 Khi sử dụng memory trong chatbot, **tóm tắt hội thoại** là một kỹ thuật hữu ích để giúp chatbot giữ lại những thông tin quan trọng và loại bỏ những chi tiết không cần thiết. Tuy nhiên, việc tóm tắt phải được thực hiện đúng cách. Hãy đảm bảo rằng **bản tóm tắt hội thoại không bỏ sót các facts quan trọng** mà người dùng muốn chatbot nhớ, và đảm bảo rằng chatbot không lặp lại các thông tin không cần thiết.
 
@@ -204,7 +204,7 @@ Ví dụ:
 
 ---
 
-### 3.2. **ConvoMem Benchmark**.
+### 3.3.2. ConvoMem Benchmark
 
 Những bài kiểm tra thủ công đơn giản có một ưu điểm lớn: ai cũng có thể tự thực hiện, không cần công cụ phức tạp hay dữ liệu lớn. Chỉ cần đặt câu hỏi, trò chuyện nhiều lượt với chatbot và đánh giá bằng cảm nhận hoặc rubric cơ bản. Với các chatbot nhỏ, chatbot nội bộ hoặc mới phát triển, cách test này đủ để phát hiện những lỗi lớn, như nhớ sai thông tin, quên yêu cầu trước đó, hoặc trả lời lệch trọng tâm.
 
@@ -300,7 +300,7 @@ Kết quả cho thấy phần lớn người dùng **không bao giờ vượt qu
 
 ---
 
-## 4. Level 3 — Chatbot RAG
+## 3.4. Level 3 — Chatbot RAG
 
 Khi chatbot bắt đầu sử dụng **RAG**, cách đánh giá chất lượng **phải thay đổi hoàn toàn** so với chatbot thông thường. RAG có thể hiểu đơn giản khi người dùng hỏi, chatbot sẽ không trả lời ngay mà đi tìm tài liệu liên quan trước, rồi mới dùng tài liệu đó để trả lời.
 
@@ -324,7 +324,7 @@ Một pipeline RAG cơ bản gồm:
 
 Vậy nên chúng ta cần tách riêng việc đánh giá hai bước này, để có thể dễ dàng phân loại được lỗi nằm ở embedding, chunking, prompt, hay ở chính LLM.
 
-### 4.1. Đánh giá phần "Tìm" (Retriever)
+### 3.4.1. Đánh giá phần "Tìm" (Retriever)
 
 Retrieval thực chất đang làm gì? Retrieval có nhiệm vụ:
 
@@ -409,8 +409,8 @@ $$
 }
 $$
 
-    - Relevant documents retrieved: Tài liệu có liên quan được truy xuất
-    - Total relevant documents: Tất cả tài liệu có liên quan
+- Relevant documents retrieved: Tài liệu có liên quan được truy xuất
+- Total relevant documents: Tất cả tài liệu có liên quan
 
 Ví dụ: Một câu hỏi có 2 đoạn tài liệu thực sự liên quan và retriever trả về K = 5 tài liệu, trong đó chỉ có 1 tài liệu liên quan:
     → Precision@5 = 1/5 = 20%
@@ -446,7 +446,7 @@ Ví dụ: trong top-5 tài liệu được tìm ra, có 1 đoạn đúng, 4 đo�
 
 ---
 
-## 4.2. Đánh giá phần “Trả lời” — Generator
+### 3.4.2. Đánh giá phần “Trả lời” — Generator
 
 Sau khi hệ thống **đã tìm đúng tài liệu**, câu hỏi quan trọng tiếp theo không còn là _“có đủ thông tin hay không”_, mà là:
 
@@ -476,13 +476,13 @@ Nếu chatbot có trích dẫn, bạn cần kiểm tra nó có trích đúng đo
 
 ---
 
-## 4.3. Đánh giá end-to-end (e2e)
+### 3.4.3. Đánh giá end-to-end (e2e)
 
 Khi đánh giá hiệu suất bằng phương pháp đánh giá end-to-end, trọng tâm sẽ chuyển từ đánh giá từng thành phần riêng lẻ sang đánh giá toàn bộ phản hồi được tạo ra. Quá trình đánh giá này cần chuẩn bị một bộ câu hỏi đại diện, chạy qua hệ thống, rồi chấm chất lượng đầu ra theo các tiêu chí như độ chính xác, độ trung thực với nguồn, mức liên quan, và tuân thủ hướng dẫn.
 
 Việc chấm có thể làm bởi con người (chính xác nhưng tốn công) hoặc dùng LLM-as-a-judge (nhanh hơn nhưng tốn chi phí API và cần kiểm soát bias).
 
-## 4.4. RAGAS là gì và vì sao nó quan trọng trong đánh giá Chatbot RAG?
+### 3.4.4. RAGAS là gì và vì sao nó quan trọng trong đánh giá Chatbot RAG?
 
 RAGAS (Retrieval-Augmented Generation Assessment) là một framework đánh giá chatbot RAG theo tư duy component-wise evaluation. Nó không đánh giá câu trả lời một cách mơ hồ, mà đánh giá từng thành phần trong hệ RAG.
 
@@ -493,7 +493,7 @@ Thay vì chỉ hỏi: “Câu trả lời có đúng không?”. RAGAS đặt ra
 - Câu trả lời có bám vào context không?
 - Model có bịa thêm ngoài tài liệu không?
 
-### **Component-wise Evaluation**
+#### **Component-wise Evaluation**
 
 ![[Pasted image 20260118161055.png]]
 
@@ -503,9 +503,9 @@ RAGAS chia hệ RAG thành 3 phần logic để đánh giá:
 3. Answer (Generator output)
 
 Từ đó, các metric của RAGAS không chấm “đúng/sai” đơn giản, mà đo mối quan hệ giữa 3 phần này.
-### **Các nhóm metric chính trong RAGAS**
+#### **Các nhóm metric chính trong RAGAS**
 
-#### **Nhóm metric cho Retriever / Context**
+##### **Nhóm metric cho Retriever / Context**
 
 **Context Recall**: đánh giá context có chứa đủ thông tin cần thiết để trả lời câu hỏi không? Trong RAGAS, Context Recall thường được ước lượng ở mức thông tin cần thiết cho câu trả lời (fact-level), không đơn thuần là số đoạn văn (chunk-level). Metric này giúp phát hiện:
 
@@ -518,13 +518,13 @@ Từ đó, các metric của RAGAS không chấm “đúng/sai” đơn giản, 
 - Context Precision thấp = noise cao
 - LLM phải đọc nhiều đoạn không liên quan → dễ suy diễn sai
 
-#### **Nhóm metric cho Generator / Answer**
+##### **Nhóm metric cho Generator / Answer**
 
 **Faithfulness**: Câu trả lời được tạo ra được coi là trung thực nếu tất cả các khẳng định trong câu trả lời có thể được suy luận từ ngữ cảnh đã cho. Hay nói cách khác có chi tiết nào trong câu trả lời không tìm thấy trong ngữ cảnh đã cho không? Có suy diễn, bịa, hoặc làm cho câu trả lời hay hơn không. Faithfulness trong RAGAS rất gần với khái niệm Groundedness, nhưng được đo thông qua LLM-as-a-judge theo rubric rõ ràng (so sánh answer với context). Thang điểm được chia trong khoảng (0,1) và được tính như sau:
 
 **Answer Relevancy**: đánh giá câu trả lời có thực sự trả lời đúng câu hỏi không? Có bám câu hỏi không? Hay nói lan man, lệch trọng tâm? Thông số này giúp tách bạch giữa “câu trả lời đúng nhưng không đúng cái cần hỏi” và “câu trả lời đúng và đúng trọng tâm”
 
-#### **Các metric khác:**
+##### **Các metric khác:**
 
 **Context Utilization:** tính toán bao nhiêu phần trăm thông tin trong context thực sự được sử dụng trong câu trả lời. Metric này giúp tối ưu top-k, prompt cost / latency
 
@@ -547,7 +547,7 @@ RAGAS không thay thế hoàn toàn các metric IR truyền thống dùng để 
 
 ---
 
-## 5. Level 4 — Chatbot Tool/Agent
+## 3.5. Level 4 — Chatbot Tool/Agent
 
 Khi chatbot bắt đầu gọi tool (truy vấn database, tạo ticket, gọi API…), việc đánh giá không thể dừng lại ở câu trả lời nghe có hợp lý hay không. Một chatbot có thể giải thích rất hay, nhưng chọn sai tool, truyền sai tham số hoặc làm sai quy trình thì về bản chất vẫn là thất bại. Ở level này, chất lượng chatbot được đo bằng một câu hỏi rất thực tế:
 

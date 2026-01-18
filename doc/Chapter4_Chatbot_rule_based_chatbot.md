@@ -1,19 +1,22 @@
 
-## Khái niệm
+# Chương 4 - Chatbot dựa trên Luật (Rule-Based Approach)
+## 4.1. Khái niệm và cơ chế hoạt động
+
+### Khái niệm
 
 > ✏️ **Định nghĩa:** Là chatbot hoạt động dựa trên tập hợp các quy tắc và kịch bản được lập trình sẵn.
 
-## Cơ chế hoạt động
+### Cơ chế hoạt động
 
 Chatbot dựa trên luật hoạt động như một cấu trúc **If – Then** đã được hệ thống kịch bản hoá sẵn: **Nếu** người dùng nói A, chatbot sẽ trả lời B.
 
-### Phương thức nhập
+### Các phương thức nhập
 
 - **Chatbot dựa trên nút bấm hoặc menu**: cung cấp cho người dùng danh sách các câu hỏi được xác định trước để lựa chọn và nhận câu trả lời tương ứng. Điều này đặt ra những giới hạn nghiêm ngặt cho cuộc hội thoại, vì vậy những chatbot này thường được sử dụng cho các dịch vụ hỗ trợ khách hàng cơ bản nhất.
 - **Chatbot dựa trên nhận diện từ khóa**: cho phép người dùng tự đặt câu hỏi và chatbot sẽ nhận diện các từ khóa trong câu hỏi đó để đưa ra câu trả lời tương ứng. Tuy nhiên, chatbot nhận diện từ khóa có thể đưa ra câu trả lời không liên quan nếu từ khóa được diễn đạt khác với những từ khóa đã được định nghĩa trước trong cơ sở dữ liệu.
 - **Chatbot lai**: kết hợp cả nút bấm/menu và nhận diện từ khóa trong một hệ thống, cho phép doanh nghiệp kết hợp ưu điểm của cả hai loại chatbot trên.
 
-### Quy trình xử lý thông tin
+## 4.2. Quy trình xử lý thông tin
 
 Quy trình này diễn ra theo 3 bước chính:
 
@@ -29,7 +32,7 @@ Hầu hết các rule-based chatbot điều hướng người dùng đi qua mộ
 
 ![Minh hoạ mô hình cây quyết định](image%201.png)
 
-## Ưu – nhược điểm
+## 4.3. Ưu điểm – Nhược điểm
 
 ### Ưu điểm
 
@@ -45,14 +48,14 @@ Hầu hết các rule-based chatbot điều hướng người dùng đi qua mộ
 
 ### So sánh với AI Chatbot
 
-| Đặc điểm | Rule-based Chatbot | AI Chatbot |
-| --- | --- | --- |
-| Cơ chế | Quy tắc If–Then | Học máy & Xử lý ngôn ngữ tự nhiên (NLP) |
-| Đầu vào | Từ khóa chính xác, nút bấm | Ngôn ngữ tự nhiên, ngữ cảnh phức tạp |
-| Khả năng học | Không tự học, phải cập nhật thủ công | Tự học từ dữ liệu và tương tác |
-| Độ linh hoạt | Thấp (rất cứng nhắc) | Cao (hiểu ý định, cảm xúc) |
+| Đặc điểm     | Rule-based Chatbot                   | AI Chatbot                              |
+| ------------ | ------------------------------------ | --------------------------------------- |
+| Cơ chế       | Quy tắc If–Then                      | Học máy & Xử lý ngôn ngữ tự nhiên (NLP) |
+| Đầu vào      | Từ khóa chính xác, nút bấm           | Ngôn ngữ tự nhiên, ngữ cảnh phức tạp    |
+| Khả năng học | Không tự học, phải cập nhật thủ công | Tự học từ dữ liệu và tương tác          |
+| Độ linh hoạt | Thấp (rất cứng nhắc)                 | Cao (hiểu ý định, cảm xúc)              |
 
-## Cách xây dựng và cải thiện chatbot dựa trên luật
+## 4.4. Cách xây dựng và cải thiện chatbot dựa trên luật
 
 ### Cách xây dựng
 
