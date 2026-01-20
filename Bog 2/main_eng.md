@@ -14,21 +14,21 @@ Machine Learning (ML) has emerged as one of the most transformative technologies
  
 ```mermaid
 graph LR
-    A["📊 Data Collection<br/>& Preparation"] --> B["🧠 Learning<br/>& Training"]
-    B --> C["🎯 Prediction<br/>& Inference"]
-    C --> D["📈 Feedback<br/>& Evaluation"]
+    A["📊 Data Collection<br/>and Preparation"] --> B["🧠 Learning<br/>and Training"]
+    B --> C["🎯 Prediction<br/>and Inference"]
+    C --> D["📈 Feedback<br/>and Evaluation"]
     D --> A
     
     A -.->|Train Model| B
     B -.->|Deploy Model| C
     C -.->|Monitor Results| D
-    D -.->|Improve & Iterate| A
+    D -.->|Improve and Iterate| A
     
     style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
     style B fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
     style C fill:#fff3e0,stroke:#f57c00,stroke-width:2px
     style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    ```
+```
 ## Definition and Fundamental Concepts
 ### Formal Definition
 Machine Learning is a subfield of artificial intelligence (AI) that focuses on developing algorithms and statistical models that enable computer systems to progressively improve their performance on a specific task through experience, without being explicitly programmed for every scenario.

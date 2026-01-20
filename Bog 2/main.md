@@ -10,15 +10,15 @@ Blog này được tạo ra để trả lời những câu hỏi đó thông qua
 Machine Learning (ML - Học máy) đã nổi lên như một trong những công nghệ có tính chuyển đổi nhất của thế kỷ 21, thay đổi căn bản cách chúng ta tiếp cận giải quyết vấn đề trong nhiều lĩnh vực đa dạng. Từ chẩn đoán y tế đến xe tự lái, từ xử lý ngôn ngữ tự nhiên đến mô hình hóa khí hậu, machine learning đã trở thành công cụ không thể thiếu trong khoa học máy tính và kỹ thuật hiện đại.
 ```mermaid
 graph LR
-    A["📊 Thu thập<br/>& Chuẩn bị Dữ liệu"] --> B["🧠 Học<br/>& Huấn luyện"]
-    B --> C["🎯 Dự đoán<br/>& Suy luận"]
-    C --> D["📈 Phản hồi<br/>& Đánh giá"]
+    A["📊 Thu thập<br/>& Chuẩn bị Dữ liệu"] --> B["🧠 Học<br/>và Huấn luyện"]
+    B --> C["🎯 Dự đoán<br/>và Suy luận"]
+    C --> D["📈 Phản hồi<br/>và Đánh giá"]
     D --> A
     
     A -.->|Huấn luyện Mô hình| B
     B -.->|Triển khai Mô hình| C
     C -.->|Theo dõi Kết quả| D
-    D -.->|Cải thiện & Lặp lại| A
+    D -.->|Cải thiện và Lặp lại| A
     
     style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
     style B fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
@@ -26,7 +26,8 @@ graph LR
     style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
 ```
 ## Định nghĩa và khái niệm cơ bản
-### Định nghĩa chính thức
+### Định nghĩa
+
 Machine Learning là một nhánh của trí tuệ nhân tạo (AI) tập trung vào việc phát triển các thuật toán và mô hình thống kê cho phép các hệ thống máy tính cải thiện hiệu suất của chúng trên một tác vụ cụ thể thông qua kinh nghiệm, mà không cần được lập trình rõ ràng cho mọi tình huống.
 Về mặt toán học, machine learning có thể được hình thức hóa như sau:
 Cho một tác vụ **T**, thước đo hiệu suất **P**, và kinh nghiệm **E**, một hệ thống machine learning cải thiện ở tác vụ **T**, được đo bằng **P**, thông qua kinh nghiệm **E**.
