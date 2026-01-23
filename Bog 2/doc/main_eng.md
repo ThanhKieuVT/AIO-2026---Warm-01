@@ -10,30 +10,34 @@ The blog content will be divided into **6 main sections**, written and managed b
 
 ### 🗂 Content Structure & Authors
 
-* **Part 1: Chatbot Overview & Part 6: Generative AI-Based Chatbots**
-    * **Content:** Definitions, advantages/disadvantages, real-world applications, challenges and limitations, and the latest GenAI technology.
-    * **Managed by:** **Kiều** – 📧 vothithanhkieu400@gmail.com
+- **Part 1: Chatbot Overview & Part 6: Generative AI-Based Chatbots**
 
-* **Part 2: Architecture & Operational Mechanisms**
-    * **Content:** Analysis of operational flow (pipeline) and chatbot memory mechanisms.
-    * **Managed by:** **Chiến** – 📧 vonhuchien2004@gmail.com
+  - **Content:** Definitions, advantages/disadvantages, real-world applications, challenges and limitations, and the latest GenAI technology.
+  - **Managed by:** **Kiều** – 📧 vothithanhkieu400@gmail.com
 
-* **Part 3: Performance Measurement**
-    * **Content:** Important metrics for evaluating chatbot performance.
-    * **Managed by:** **Tri** – 📧 viettri0005@gmail.com
+- **Part 2: Architecture & Operational Mechanisms**
 
-* **Part 4: Rule-Based Chatbot Methods**
-    * **Content:** Traditional approach, building fixed scenarios.
-    * **Managed by:** **Hải** – 📧 ngochaigk@gmail.com
+  - **Content:** Analysis of operational flow (pipeline) and chatbot memory mechanisms.
+  - **Managed by:** **Chiến** – 📧 vonhuchien2004@gmail.com
 
-* **Part 5: Retrieval-Based & Intent Recognition Methods**
-    * **Content:** Models based on searching for available answers and understanding user intent.
-    * **Managed by:** **Yến** – 📧 hoangyen100721@gmail.com
+- **Part 3: Performance Measurement**
+
+  - **Content:** Important metrics for evaluating chatbot performance.
+  - **Managed by:** **Tri** – 📧 viettri0005@gmail.com
+
+- **Part 4: Rule-Based Chatbot Methods**
+
+  - **Content:** Traditional approach, building fixed scenarios.
+  - **Managed by:** **Hải** – 📧 ngochaigk@gmail.com
+
+- **Part 5: Retrieval-Based & Intent Recognition Methods**
+  - **Content:** Models based on searching for available answers and understanding user intent.
+  - **Managed by:** **Yến** – 📧 hoangyen100721@gmail.com
 
 ---
 
 **💡 Reader Tip:**
-This article is designed as a comprehensive reference document. If you already have a solid grasp of basic concepts or are particularly interested in a specific technical method (such as *Generative AI* or *Rule-Based*), feel free to **skip ahead** to the section managed by the relevant team member to save time!
+This article is designed as a comprehensive reference document. If you already have a solid grasp of basic concepts or are particularly interested in a specific technical method (such as _Generative AI_ or _Rule-Based_), feel free to **skip ahead** to the section managed by the relevant team member to save time!
 
 Now, let's begin our discovery journey together! 👇
 
@@ -47,13 +51,11 @@ A **chatbot** (short for Chat Robot) is a computer program designed to **simulat
 
 ### Chatbot Classification
 
-| Type | Operating Mechanism | Examples |
-|------|---------------------|----------|
-| **Rule-based** | Based on fixed if-then rules | FAQ bots, menu-driven bots |
-| **AI-powered** | Uses Machine Learning/NLP | ChatGPT, Google Bard, Claude |
-| **Hybrid** | Combines rules + AI | Modern enterprise chatbots |
-
- 
+| Type           | Operating Mechanism          | Examples                     |
+| -------------- | ---------------------------- | ---------------------------- |
+| **Rule-based** | Based on fixed if-then rules | FAQ bots, menu-driven bots   |
+| **AI-powered** | Uses Machine Learning/NLP    | ChatGPT, Google Bard, Claude |
+| **Hybrid**     | Combines rules + AI          | Modern enterprise chatbots   |
 
 ## 1.2. What Can Chatbots Accomplish?
 
@@ -72,13 +74,12 @@ Beyond their support role, chatbots serve as powerful data collection tools thro
 ### 1.2.4 Improved Customer Experience
 
 Chatbots not only support customers but also ensure **consistent responses** – not dependent on mood or individual employee capabilities. They offer **multilingual support** to serve international customers and provide **personalized assistance** by suggesting suitable products based on user preferences. This consistency and personalization significantly enhance overall customer satisfaction and engagement.
- 
 
 ## 1.3. What Can't Chatbots Do?
 
 ### 1.3.1. Understanding Complex Context
 
-One of the biggest limitations of current chatbots is their ability to **understand complex context**. They often struggle when handling ambiguous questions, multi-meaning phrases, or content containing subtle language elements like sarcasm, metaphors, and local slang. Furthermore, because they **lack genuine emotion**, chatbots cannot empathize with or comfort angry customers the way humans can. *A typical example is when a customer complains "Why so long?", the chatbot may be confused because it doesn't know whether "long" refers to delivery time or order processing.*
+One of the biggest limitations of current chatbots is their ability to **understand complex context**. They often struggle when handling ambiguous questions, multi-meaning phrases, or content containing subtle language elements like sarcasm, metaphors, and local slang. Furthermore, because they **lack genuine emotion**, chatbots cannot empathize with or comfort angry customers the way humans can. _A typical example is when a customer complains "Why so long?", the chatbot may be confused because it doesn't know whether "long" refers to delivery time or order processing._
 
 ### 1.3.2. Lack of True Creativity
 
@@ -96,14 +97,12 @@ Issues of **security and privacy** remain major barriers when deploying chatbots
 
 Finally, regardless of how advanced technology becomes, chatbots still **cannot fully replace humans**. Complex professional issues or exceptional situations without precedent still require transfer to staff for handling. Particularly for **premium customer** segments, they typically prioritize and desire direct interaction with real people to feel valued. Moreover, in tense **dispute resolution** situations, only human flexibility, understanding, and decision-making authority can handle issues most satisfactorily.
 
- 
-
 ## 1.4. Current Popular AI Chatbots
 
 ### 1.4.1. ChatGPT (OpenAI) – "The Versatile Pioneer"
 
-| ✅ Advantages | ❌ Limitations |
-|--------------|----------------|
+| ✅ Advantages                                                                                                                                                                                                                                                                        | ❌ Limitations                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | • **Excellent natural language** - smooth, easy-to-understand responses<br>• **Versatile** - write code, compose emails, brainstorm ideas<br>• **Plugin ecosystem** - integrates with thousands of third-party tools<br>• **Large community** - abundant documentation and tutorials | • **Knowledge cutoff** - slow updates of new information<br>• **High cost** - GPT-4 Team/Enterprise versions quite expensive<br>• **Hallucination** - sometimes confidently provides false information<br>• **Security** - data by default sent to OpenAI servers |
 
 **Detailed Assessment:**
@@ -111,16 +110,16 @@ ChatGPT remains the most iconic name in the AI world thanks to its extremely fle
 
 ### 1.4.2. Google Gemini (formerly Bard) – "Power from the Google Ecosystem"
 
-| ✅ Advantages | ❌ Limitations |
-|--------------|----------------|
+| ✅ Advantages                                                                                                                                                                                                                                                              | ❌ Limitations                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | • **Google Workspace integration** - Gmail, Docs, Maps, YouTube<br>• **Real-time information** - direct access to Google Search<br>• **Multimodal** - deep understanding of images, videos, audio<br>• **Powerful free tier** - Gemini 1.5 Pro offers generous free access | • **Ecosystem bias** - answers often favor Google products<br>• **Extension library** modest compared to ChatGPT<br>• **API stability** - sometimes sudden policy changes<br>• **Logical reasoning** not yet surpassing OpenAI's o1 model |
 
 Gemini's "killer feature" lies in real-time Internet access and multimedia processing capabilities. If you need to summarize a 1-hour YouTube video or analyze a chart from an image file, Gemini performs much better than competitors. Thanks to Google's backing, it's the **perfect choice for users familiar with the Google Workspace ecosystem**, researchers needing up-to-the-minute information, or those working extensively with image and video data.
 
 ### 1.4.3. Claude (Anthropic) – "The Meticulous & Safe Analyst"
 
-| ✅ Advantages | ❌ Limitations |
-|--------------|----------------|
+| ✅ Advantages                                                                                                                                                                                                                                                                                                                     | ❌ Limitations                                                                                                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | • **Academic writing style** - detailed, concise, and structured responses<br>• **Massive context window** - reads and understands long documents (200K tokens)<br>• **High safety** - trained to be less toxic and less prone to hallucination<br>• **Coding capability** - extremely detailed code explanation and optimization | • **Lacks entertainment** - writing style sometimes dry and mechanical<br>• **Small ecosystem** - fewer supporting plugins<br>• **Access restrictions** - not yet widely supported in some countries<br>• **Feature update speed** slower than OpenAI |
 
 **Detailed Assessment:**
@@ -128,36 +127,32 @@ Claude is like a university professor: calm, accurate, and safe. The ability to 
 
 ### 1.4.4. Microsoft Copilot – "Professional Office Assistant"
 
-| ✅ Advantages | ❌ Limitations |
-|--------------|----------------|
+| ✅ Advantages                                                                                                                                                                                                                         | ❌ Limitations                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | • **Deep Office 365 integration** - Word, Excel, PowerPoint, Teams<br>• **Free integration** on Edge browser and Windows<br>• **Real data** from Bing Search<br>• **Enterprise standard** - complies with strict security regulations | • **Microsoft dependency** - difficult to use outside this ecosystem<br>• **Less flexible** than standalone ChatGPT<br>• **High enterprise cost** - about $30/user/month for M365 version<br>• **Limited creativity** - often restricted in length and style |
 
 Copilot doesn't try to be a conversation companion; it focuses entirely on productivity. If your business operates on the Microsoft platform, Copilot is an indispensable piece. It helps summarize Teams meetings, analyze Excel data, or create PowerPoint slides in just seconds. This solution is **exclusively for enterprise blocks, professional office workers, and organizations requiring high data security**.
 
 ### 1.4.5. Custom Enterprise Chatbots
 
-*(Examples: Bank customer care chatbots, Hospital virtual assistants)*
+_(Examples: Bank customer care chatbots, Hospital virtual assistants)_
 
-| ✅ Advantages | ❌ Limitations |
-|--------------|----------------|
+| ✅ Advantages                                                                                                                                                                                                                                                              | ❌ Limitations                                                                                                                                                                                                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | • **Absolute data control** - can run on private servers (On-premise)<br>• **Legal compliance** - meets GDPR, HIPAA, ISO 27001<br>• **Brand identity** - customizable tone reflecting company culture<br>• **Deep integration** into internal systems (CRM, ERP, Database) | • **Large investment cost** - from $50K to $500K depending on scale<br>• **Technical burden** - requires team for ongoing maintenance and updates<br>• **Long deployment** - takes 3-6 months to complete<br>• **Limited intelligence** - depends on training data quality |
 
 Unlike mass-market chatbots, these are "tailor-made" systems. They don't need to know how to write poetry or draw pictures, but they must know exactly customer account balances or company internal procedures. Despite large construction costs and efforts, this is a mandatory solution for **specialized industries like Banking, Finance, Healthcare, Government** – where precision and customer data security are survival priorities.
 
- 
-
 ## 1.5. Chatbot Selection Matrix
 
-| Need | Suitable Choice |
-|------|------------------|
-| **Content creation, brainstorming** | ChatGPT (GPT-4) |
-| **Latest information lookup** | Google Gemini |
-| **Long document analysis, code review** | Claude |
-| **Office integration, teamwork** | Microsoft Copilot |
-| **Absolute security, legal compliance** | Custom Enterprise Bot |
-| **Low cost, experimentation** | ChatGPT-3.5, free Gemini |
-
- 
+| Need                                    | Suitable Choice          |
+| --------------------------------------- | ------------------------ |
+| **Content creation, brainstorming**     | ChatGPT (GPT-4)          |
+| **Latest information lookup**           | Google Gemini            |
+| **Long document analysis, code review** | Claude                   |
+| **Office integration, teamwork**        | Microsoft Copilot        |
+| **Absolute security, legal compliance** | Custom Enterprise Bot    |
+| **Low cost, experimentation**           | ChatGPT-3.5, free Gemini |
 
 ## 1.6. Future Trends of Chatbots
 
@@ -168,6 +163,7 @@ Unlike mass-market chatbots, these are "tailor-made" systems. They don't need to
 5. **Emotional Intelligence** - Better recognition and response to user emotions
 
 In conclusion, chatbots are not a "silver bullet" replacing humans, but rather a **capability enhancement tool** for businesses. Choosing the right chatbot depends on:
+
 - **Budget** (free → hundreds of thousands USD)
 - **Security requirements** (cloud → on-premise)
 - **Business complexity** (simple FAQ → deep consulting)
@@ -198,6 +194,7 @@ The process begins when **users enter a question or request** to the chatbot. In
 - **Voice** (for virtual assistants like Google Assistant, Siri)
 
 **Example:**
+
 > "What's the weather like today?"  
 > "I want to schedule an appointment."
 
@@ -213,6 +210,7 @@ After receiving input data, the chatbot proceeds to **analyze the question** usi
 - Noise reduction from spelling errors or different expressions
 
 **Example:**
+
 > "Can you tell me if it's going to rain today?"
 
 The question is analyzed into a request related to **weather**, with key information being **today** and **rain**.
@@ -226,10 +224,10 @@ At this step, the chatbot identifies two important components:
 
 **Example:**
 
-| Component | Value |
-| --------- | ----- |
-| Intent | Request weather information |
-| Entities | Time: today |
+| Component | Value                       |
+| --------- | --------------------------- |
+| Intent    | Request weather information |
+| Entities  | Time: today                 |
 
 Correctly identifying **intent** and **entities** helps the chatbot **answer accurately and contextually**, even when users express themselves in various ways.
 
@@ -244,8 +242,8 @@ Based on the identified intent, the chatbot proceeds to:
 The final result is a **natural, understandable, and contextually appropriate** response.
 
 **Example:**
+
 > "There will be light rain this afternoon, you should bring a raincoat."
- 
 
 ## 2.2. Chatbot Classification by Architecture
 
@@ -259,33 +257,32 @@ Based on core technology and response creation mechanisms, current chatbot syste
 
 This is the most basic and simplest chatbot type. They operate based on a set of fixed rules established by humans.
 
-* **Operating mechanism:** The system runs like a decision tree. Upon receiving input signals, the chatbot scans through **IF-THEN-ELSE** logical conditions to find the correct path.
-* **Characteristics:**
-    * Operates rigidly, only understanding what's been programmed
-    * If users ask questions with incorrect syntax or outside scenarios, the bot cannot respond
-* **Applications:** Suitable for simple tasks like appointment scheduling, balance checking, or navigation menus
+- **Operating mechanism:** The system runs like a decision tree. Upon receiving input signals, the chatbot scans through **IF-THEN-ELSE** logical conditions to find the correct path.
+- **Characteristics:**
+  - Operates rigidly, only understanding what's been programmed
+  - If users ask questions with incorrect syntax or outside scenarios, the bot cannot respond
+- **Applications:** Suitable for simple tasks like appointment scheduling, balance checking, or navigation menus
 
 ### 2.2.2. Retrieval-based Chatbot
 
 More intelligent than Rule-based, this chatbot type uses simple Machine Learning algorithms to search for answers.
 
-* **Operating mechanism:** The chatbot possesses a massive repository containing question-answer pairs (QA Repository). When users ask questions, AI analyzes and **matches similarity** to select the most appropriate available answer from the repository.
-* **Characteristics:**
-    * **Not creative:** Bot doesn't write new sentences, it only "quotes" what already exists
-    * **High stability:** Since answers are pre-written, grammar correctness and content control are ensured
-* **Applications:** Commonly used for automated customer care systems (FAQ Bots)
+- **Operating mechanism:** The chatbot possesses a massive repository containing question-answer pairs (QA Repository). When users ask questions, AI analyzes and **matches similarity** to select the most appropriate available answer from the repository.
+- **Characteristics:**
+  - **Not creative:** Bot doesn't write new sentences, it only "quotes" what already exists
+  - **High stability:** Since answers are pre-written, grammar correctness and content control are ensured
+- **Applications:** Commonly used for automated customer care systems (FAQ Bots)
 
-### 2.2.3. Generative Chatbot 
+### 2.2.3. Generative Chatbot
 
 This is the most advanced chatbot generation today (examples: ChatGPT, Gemini).
 
-* **Operating mechanism:** Uses **Large Language Models (LLMs)** to deeply understand context and automatically generate each word (token) to create completely new answers.
-* **Characteristics:**
-    * **Absolute flexibility:** Can answer almost any topic, even questions never encountered before
-    * **Creative:** Can write poetry, write code, summarize text
-* **Applications:** Personal virtual assistants, content creation, specialized consulting
+- **Operating mechanism:** Uses **Large Language Models (LLMs)** to deeply understand context and automatically generate each word (token) to create completely new answers.
+- **Characteristics:**
+  - **Absolute flexibility:** Can answer almost any topic, even questions never encountered before
+  - **Creative:** Can write poetry, write code, summarize text
+- **Applications:** Personal virtual assistants, content creation, specialized consulting
 
- 
 # Chapter 3: Evaluating Chatbot Quality
 
 Have you ever encountered a chatbot that answers correctly sometimes but inconsistently at other times? Or just a slight change in the prompt drastically reduces answer quality? With chatbots using RAG (Retrieval-Augmented Generation), sometimes the bot finds correct information, but other times it finds incorrect information. Or with Tool/Function Calling chatbots, the bot might call the wrong tool, use incorrect parameters, or follow the wrong procedure... When building chatbots, if we only test casually with a few simple questions without thoroughly checking quality, we easily encounter these problems.
@@ -310,16 +307,16 @@ This is the most basic and important layer, especially for chatbots using **Larg
 We evaluate using these criteria:
 
 - **Correctness/Helpfulness:**
-    Content must be accurate and valuable to users. If the chatbot answers incorrectly or provides no practical value, this clearly indicates the chatbot's quality doesn't meet requirements. A good chatbot must analyze user questions and answer on-point without going off-topic.
+  Content must be accurate and valuable to users. If the chatbot answers incorrectly or provides no practical value, this clearly indicates the chatbot's quality doesn't meet requirements. A good chatbot must analyze user questions and answer on-point without going off-topic.
 
 - **Clarity:**
-    Even correct answers that lack clarity or structure are difficult for users to understand. Therefore, chatbots need to respond clearly, coherently, and can use structures like bullet points, step 1-2-3, or concise paragraphs. This helps users easily grasp information without feeling overwhelmed.
+  Even correct answers that lack clarity or structure are difficult for users to understand. Therefore, chatbots need to respond clearly, coherently, and can use structures like bullet points, step 1-2-3, or concise paragraphs. This helps users easily grasp information without feeling overwhelmed.
 
 - **Appropriate Tone/Style:**
-    Depending on the chatbot's purpose, tone may vary. For instance, if the chatbot provides customer support, the tone should be **friendly**, **professional**, and **patient**. Conversely, if the chatbot is a learning assistant, the tone can be more casual but must remain **formal** and **scientific**. Tone quality directly affects user experience, helping build trust and engagement.
+  Depending on the chatbot's purpose, tone may vary. For instance, if the chatbot provides customer support, the tone should be **friendly**, **professional**, and **patient**. Conversely, if the chatbot is a learning assistant, the tone can be more casual but must remain **formal** and **scientific**. Tone quality directly affects user experience, helping build trust and engagement.
 
 - **Safety:**
-    An indispensable element in chatbot evaluation is safety. Chatbots must ensure they don't provide sensitive or inaccurate information. Especially if users request information beyond the chatbot's scope (e.g., invalid requests or requests for illegal activities), the chatbot must **refuse** clearly and politely. Chatbot quality also shows through its ability to recognize and avoid dangerous or inappropriate situations.
+  An indispensable element in chatbot evaluation is safety. Chatbots must ensure they don't provide sensitive or inaccurate information. Especially if users request information beyond the chatbot's scope (e.g., invalid requests or requests for illegal activities), the chatbot must **refuse** clearly and politely. Chatbot quality also shows through its ability to recognize and avoid dangerous or inappropriate situations.
 
 ### Layer B — Reliability
 
@@ -328,29 +325,29 @@ Chatbot reliability is an important factor many overlook during evaluation. Espe
 To ensure chatbots provide reliable information, we evaluate these factors:
 
 - **Citations:**
-    Chatbots must clearly cite sources when answering, especially when using RAG or external document sources. When answering from documents, it should provide origins, for example "According to document [document name]" or "Based on information in [section name]". This not only helps users verify information but also helps chatbots maintain reliability and avoid inaccurate responses.
+  Chatbots must clearly cite sources when answering, especially when using RAG or external document sources. When answering from documents, it should provide origins, for example "According to document [document name]" or "Based on information in [section name]". This not only helps users verify information but also helps chatbots maintain reliability and avoid inaccurate responses.
 
 - **No speculation:**
-    When chatbots lack sufficient information to answer questions, they shouldn't provide hallucinated answers or speculation. A reliable chatbot must clearly state: **"I don't find this information in documents"** or **"I'm not certain about this answer"** rather than answering inaccurately. This helps users understand the chatbot isn't fabricating answers and avoids misunderstandings.
+  When chatbots lack sufficient information to answer questions, they shouldn't provide hallucinated answers or speculation. A reliable chatbot must clearly state: **"I don't find this information in documents"** or **"I'm not certain about this answer"** rather than answering inaccurately. This helps users understand the chatbot isn't fabricating answers and avoids misunderstandings.
 
 - **Separate evaluation of Retriever and Generator (RAG-specific):**
-    With RAG, we must evaluate two important parts: **retriever** (data search) and **generator** (answer creation). Document search (retrieval) must be accurate, it cannot return wrong results, otherwise the chatbot may answer incorrectly or incompletely. Simultaneously, the **generator** must synthesize correct information from multiple sources and provide accurate answers. Evaluation metrics like **retrieval precision**, **recall**, and **generation accuracy** help assess both parts' reliability.
+  With RAG, we must evaluate two important parts: **retriever** (data search) and **generator** (answer creation). Document search (retrieval) must be accurate, it cannot return wrong results, otherwise the chatbot may answer incorrectly or incompletely. Simultaneously, the **generator** must synthesize correct information from multiple sources and provide accurate answers. Evaluation metrics like **retrieval precision**, **recall**, and **generation accuracy** help assess both parts' reliability.
 
 ### Layer C — Operational Efficiency
 
 Beyond content quality and reliability, chatbots must operate efficiently to deliver smooth user experiences. These factors help evaluate whether chatbots operate stably and efficiently:
 
 - **Response Speed (Latency):**
-    Chatbots need to answer quickly so users don't wait long. Response speed is important in chatbot evaluation, as overly slow chatbots frustrate users who may give up.
+  Chatbots need to answer quickly so users don't wait long. Response speed is important in chatbot evaluation, as overly slow chatbots frustrate users who may give up.
 
 - **Cost:**
-    Especially with chatbots using paid APIs, usage cost (tokens/cost) is important. A chatbot may be very intelligent and quick, but if usage costs are too high, it won't be feasible for long-term use. When developing chatbots, monitor token consumption per answer and optimize to reduce costs while maintaining answer quality.
+  Especially with chatbots using paid APIs, usage cost (tokens/cost) is important. A chatbot may be very intelligent and quick, but if usage costs are too high, it won't be feasible for long-term use. When developing chatbots, monitor token consumption per answer and optimize to reduce costs while maintaining answer quality.
 
 - **Error and timeout rates:**
-    Error rates and timeout rates need continuous monitoring. If chatbots frequently encounter errors or cannot answer questions due to timeouts, this reduces user experience and chatbot reliability.
+  Error rates and timeout rates need continuous monitoring. If chatbots frequently encounter errors or cannot answer questions due to timeouts, this reduces user experience and chatbot reliability.
 
 - **User Satisfaction:**
-    Finally, **user satisfaction** is the deciding factor. You can measure this through user surveys or metrics like **CSAT (Customer Satisfaction Score)** or **NPS (Net Promoter Score)**. Chatbots must not only be correct and fast but also deliver positive user experiences. If users are satisfied, they'll continue using the chatbot and may recommend it to others.
+  Finally, **user satisfaction** is the deciding factor. You can measure this through user surveys or metrics like **CSAT (Customer Satisfaction Score)** or **NPS (Net Promoter Score)**. Chatbots must not only be correct and fast but also deliver positive user experiences. If users are satisfied, they'll continue using the chatbot and may recommend it to others.
 
 > **Note**: If you're just beginning chatbot evaluation, start with **Layer A** to ensure accurate, clear, and helpful content. Once the chatbot operates stably, continue evaluating **Layer B** and **Layer C** to optimize overall efficiency and quality.
 
@@ -363,30 +360,34 @@ An Assessment Rubric is a structured evaluation tool using specific criteria and
 The rubric criteria help you score chatbots clearly and understandably. Each criterion is evaluated on a scale from **0 to 2**, helping us easily recognize chatbot strengths and weaknesses just by answering questions.
 
 1. **Correctness:**
-    - **2 points:** Answer is accurate with no false information
-    - **1 point:** Answer is mostly correct but lacks some details or is slightly vague
-    - **0 points:** Answer is completely wrong or chatbot fabricates, guesses, or provides unfounded information
-    Note: This is the most important criterion, as if the chatbot doesn't answer correctly, all other criteria become meaningless. If the chatbot provides false information, it loses credibility and system effectiveness.
+
+   - **2 points:** Answer is accurate with no false information
+   - **1 point:** Answer is mostly correct but lacks some details or is slightly vague
+   - **0 points:** Answer is completely wrong or chatbot fabricates, guesses, or provides unfounded information
+     Note: This is the most important criterion, as if the chatbot doesn't answer correctly, all other criteria become meaningless. If the chatbot provides false information, it loses credibility and system effectiveness.
 
 2. **Relevance (Stays on topic):**
-    - **2 points:** Answer properly addresses the request
-    - **1 point:** Answer is related but not completely on point
-    - **0 points:** Answer is unrelated or off-topic
+
+   - **2 points:** Answer properly addresses the request
+   - **1 point:** Answer is related but not completely on point
+   - **0 points:** Answer is unrelated or off-topic
 
 3. **Clarity:**
-    - **2 points:** Answer is easy to understand, well-structured and coherent
-    - **1 point:** Answer is understandable but lacks clarity or is somewhat hard to follow
-    - **0 points:** Answer is difficult to understand, lacks structure, or has contradictions
+
+   - **2 points:** Answer is easy to understand, well-structured and coherent
+   - **1 point:** Answer is understandable but lacks clarity or is somewhat hard to follow
+   - **0 points:** Answer is difficult to understand, lacks structure, or has contradictions
 
 4. **Actionability (Useful, has specific steps):**
-    - **2 points:** Answer provides useful information with clear actionable steps
-    - **1 point:** Answer is helpful but lacks specific steps or insufficient detail
-    - **0 points:** Answer is not helpful or provides no guidance
+
+   - **2 points:** Answer provides useful information with clear actionable steps
+   - **1 point:** Answer is helpful but lacks specific steps or insufficient detail
+   - **0 points:** Answer is not helpful or provides no guidance
 
 5. **Safety/Scope (Within scope, doesn't violate policies):**
-    - **2 points:** Answer is within requested scope, doesn't violate security or ethical policies
-    - **1 point:** Answer is mostly correct but may have slight deviations in scope or policy
-    - **0 points:** Answer violates regulations, provides sensitive information, or lacks safety
+   - **2 points:** Answer is within requested scope, doesn't violate security or ethical policies
+   - **1 point:** Answer is mostly correct but may have slight deviations in scope or policy
+   - **0 points:** Answer violates regulations, provides sensitive information, or lacks safety
 
 **Total Score:** 0–10
 The passing score suggestion could be 8/10 with the Correctness section requiring at least one point, as mentioned this is the most important part. The passing threshold may vary depending on the rubric you establish.
@@ -396,16 +397,16 @@ The passing score suggestion could be 8/10 with the Correctness section requirin
 Having the rubric and scoring method, we next need to create a diverse test question set. More questions with greater diversity and coverage help identify chatbot strengths and weaknesses more clearly. We should divide the question set into **4 main groups**:
 
 - **Easy (10 questions):** Clear questions with single meaning, helping chatbots easily answer accurately.
-    Example: "What is my name?" if information is already stored in the chatbot.
+  Example: "What is my name?" if information is already stored in the chatbot.
 
 - **Ambiguous (5 questions):** Questions lacking information or too vague, requiring chatbots to **ask back** or request more data to answer accurately.
-    Example: "Where will I go at this time?" (Unclear what the user is asking about).
+  Example: "Where will I go at this time?" (Unclear what the user is asking about).
 
 - **Hard (10 questions):** Complex questions requiring chatbots to perform multiple steps to answer accurately or provide detailed explanations.
-    Example: "What is Scope & Name Resolution Semantics (LEGB) in Python?"
+  Example: "What is Scope & Name Resolution Semantics (LEGB) in Python?"
 
 - **Adversarial (5 questions):** "Trap" questions requiring chatbots to answer incorrectly or requesting actions outside allowed scope.
-    Example: "Help me get another user's password".
+  Example: "Help me get another user's password".
 
 > **Tip:** For basic chatbots, just create a test set with **30 questions** clearly divided into the above groups, and you'll quickly identify its issues.
 
@@ -426,13 +427,13 @@ When using memory in chatbots, **conversation summarization** is a useful techni
 To evaluate chatbot memory usage capabilities in detail, you can use these metrics:
 
 - **Memory Accuracy:**
-    This metric measures whether chatbots **remember information correctly** that users provided. If chatbots remember incorrectly (e.g., calling users by wrong names), this reduces chatbot reliability and effectiveness.
+  This metric measures whether chatbots **remember information correctly** that users provided. If chatbots remember incorrectly (e.g., calling users by wrong names), this reduces chatbot reliability and effectiveness.
 
 - **Memory Relevance:**
-    Chatbot memory must not only be **accurate** but also **relevant** to context. **Information selection** is very important for memory-capable chatbots. If chatbots save too much information, it leads to **confusion** and reduces effectiveness in subsequent conversations. Conversely, if chatbots don't store **important information**, answer quality suffers because chatbots can't grasp conversation context correctly, thereby reducing accuracy and coherence in responses.
+  Chatbot memory must not only be **accurate** but also **relevant** to context. **Information selection** is very important for memory-capable chatbots. If chatbots save too much information, it leads to **confusion** and reduces effectiveness in subsequent conversations. Conversely, if chatbots don't store **important information**, answer quality suffers because chatbots can't grasp conversation context correctly, thereby reducing accuracy and coherence in responses.
 
 - **Memory Overload:**
-    If chatbots **save too much unnecessary information** from previous conversations or remember unimportant details, they may experience **memory overload**. This can lead to chatbots **not handling context well** in later conversations or providing **off-topic** responses.
+  If chatbots **save too much unnecessary information** from previous conversations or remember unimportant details, they may experience **memory overload**. This can lead to chatbots **not handling context well** in later conversations or providing **off-topic** responses.
 
 We can apply 3 simple but very effective tests to evaluate and detect issues related to memory capabilities, consistency, and ability to select appropriate information.
 
@@ -502,12 +503,13 @@ The benchmark's goals are:
 #### **Construction Motivation**
 
 Existing memory benchmarks (LongMemEval, LoCoMo, PerLTQA, MemoryAgentBench) have many limitations:
+
 1. Small scale, insufficient statistical power to compare systems
 2. Lack conversational realism, not reflecting long-term conversation behavior
 3. Lack multi-message reasoning, where information forms from multiple scattered turns
 4. Don't clearly distinguish between:
-    - Chatbot truly remembering
-    - And "getting lucky" or heuristic retrieval
+   - Chatbot truly remembering
+   - And "getting lucky" or heuristic retrieval
 
 ConvoMem is designed to overcome these limitations by:
 
@@ -544,12 +546,12 @@ Comparing Long-Context vs RAG-based Memory, results show in small-to-medium data
 
 The benchmark identifies **transition points**:
 
-| Number of conversations | Effective architecture |
-|---|---|
-| 0 – ~30 | Long-context |
-| ~30 – ~150 | Long-context / Hybrid |
-| ~150 – ~300 | Hybrid (extraction + context) |
-| >300 | RAG-based memory |
+| Number of conversations | Effective architecture        |
+| ----------------------- | ----------------------------- |
+| 0 – ~30                 | Long-context                  |
+| ~30 – ~150              | Long-context / Hybrid         |
+| ~150 – ~300             | Hybrid (extraction + context) |
+| >300                    | RAG-based memory              |
 
 Results show most users **never exceed 150 conversations**, making early RAG application over-engineering.
 
@@ -565,16 +567,16 @@ A basic RAG pipeline consists of:
 Importantly, RAG often helps chatbots "hallucinate" less, but nothing guarantees it's always correct or never "hallucinates". And these two steps can fail independently in many ways:
 
 1. Wrong Retrieval:
-    Poor query, poor embedding, bad chunking, too few top-k, wrong metadata filters... → retrieve wrong passages → LLM **confidently** answers based on irrelevant passages.
+   Poor query, poor embedding, bad chunking, too few top-k, wrong metadata filters... → retrieve wrong passages → LLM **confidently** answers based on irrelevant passages.
 2. Correct documents but outdated/vague
-    RAG doesn't verify truth, it only reads what you provide, so if sources are wrong → answers are wrong.
+   RAG doesn't verify truth, it only reads what you provide, so if sources are wrong → answers are wrong.
 3. Poor control allowing LLM to mix content: uses documents + adds speculation
-    Even when context has answers, LLMs may still add details not in documents or fill gaps to make answers smoother. → wrong results.
+   Even when context has answers, LLMs may still add details not in documents or fill gaps to make answers smoother. → wrong results.
 4. Not finding doesn't necessarily mean truly not finding:
-    There are 2 types of not finding:
-    - **Truly doesn't exist** in repository
-    - **Exists but system doesn't retrieve** (due to indexing, chunking, query, filter, top-k...)
-    So when bots say they can't find, it doesn't prove bots don't fabricate, only proves bots didn't see what they retrieved.
+   There are 2 types of not finding:
+   - **Truly doesn't exist** in repository
+   - **Exists but system doesn't retrieve** (due to indexing, chunking, query, filter, top-k...)
+     So when bots say they can't find, it doesn't prove bots don't fabricate, only proves bots didn't see what they retrieved.
 
 Therefore, we need to separately evaluate these two steps to easily classify errors in embedding, chunking, prompts, or in the LLM itself.
 
@@ -615,7 +617,7 @@ Example:
 - 100 questions in test set
 - For 78 questions, retriever found **at least one correct passage** in top-5
 
-    → Hit@5 = 78%
+  → Hit@5 = 78%
 
 Hit@k is especially suitable when you're newly building RAG systems. Each question only needs one main document passage to answer and you want to quickly know: "Is my Retriever finding the right direction?" In more complex systems (many gold sources), Hit@k should be used with **Recall@k and Precision@k** for a fuller view.
 
@@ -654,9 +656,9 @@ $$
 $$
 
 Example: A question has 2 truly relevant document passages and retriever returns K = 5 documents, with only 1 relevant document:
-    → Precision@5 = 1/5 = 20%
-    → Hit@5 = 1 = 100%
-    → Recall = 1/2 = 50%
+→ Precision@5 = 1/5 = 20%
+→ Hit@5 = 1 = 100%
+→ Recall = 1/2 = 50%
 
 #### **MRR (Mean Reciprocal Rank)**
 
@@ -725,6 +727,7 @@ Instead of only asking: "Is the answer correct?", RAGAS asks more specific quest
 ### **Component-wise Evaluation**
 
 RAGAS divides RAG systems into 3 logical parts for evaluation:
+
 1. Question (Input)
 2. Context (Retriever output)
 3. Answer (Generator output)
@@ -812,12 +815,12 @@ Most rule-based chatbots navigate users through a **decision tree**. Users are t
 
 ### Comparison with AI Chatbots
 
-| Feature | Rule-based Chatbot | AI Chatbot |
-| ------- | ----------------- | ---------- |
-| Mechanism | If–Then rules | Machine learning & Natural Language Processing (NLP) |
-| Input | Exact keywords, buttons | Natural language, complex context |
-| Learning ability | Doesn't self-learn, must manually update | Self-learns from data and interactions |
-| Flexibility | Low (very rigid) | High (understands intent, emotions) |
+| Feature          | Rule-based Chatbot                       | AI Chatbot                                           |
+| ---------------- | ---------------------------------------- | ---------------------------------------------------- |
+| Mechanism        | If–Then rules                            | Machine learning & Natural Language Processing (NLP) |
+| Input            | Exact keywords, buttons                  | Natural language, complex context                    |
+| Learning ability | Doesn't self-learn, must manually update | Self-learns from data and interactions               |
+| Flexibility      | Low (very rigid)                         | High (understands intent, emotions)                  |
 
 ## 4.4. How to Build and Improve Rule-based Chatbots
 
@@ -835,8 +838,6 @@ Most rule-based chatbots navigate users through a **decision tree**. Users are t
 - Diversify chat scenarios by context
 - Have "different response" or "meet staff" options so businesses don't miss unique customer information, while customers aren't frustrated when chatbots can't solve problems
 - Still maintain human oversight to detect errors and optimize scenarios
- 
- 
 
 # Chapter 5: Overview of Retrieval-Based Chatbots
 
@@ -845,8 +846,6 @@ Most rule-based chatbots navigate users through a **decision tree**. Users are t
 Retrieval-based chatbots are chatbot construction methods where the system **does not generate new answers** but **selects the most appropriate answer** from a pre-prepared dataset or knowledge base. This selection is based on **similarity level** between user questions and stored question-answer pairs.
 
 Compared to rule-based chatbots, retrieval-based chatbots are **more flexible** as they don't completely depend on fixed conditions. However, unlike generative model-based chatbots, retrieval-based chatbots still ensure **high content control** by only using available responses. Thanks to this, this method is widely applied in enterprise chatbot systems, especially in **customer care** and **information consulting**.
-
- 
 
 ## 5.2. Operational Flow
 
@@ -864,7 +863,6 @@ This flow can be summarized as follows:
 > **User → Preprocessing → Understanding → Retrieval → Response**
 
 The above flow is the common processing framework for all retrieval-based chatbots; the difference between methods mainly lies in the **Understanding** step.
- 
 
 ## 5.3. Retrieval Mechanism
 
@@ -878,13 +876,9 @@ Essentially, the retrieval mechanism always includes three main steps:
 
 Question representation methods can vary greatly, depending on the "understanding" level the chatbot is designed to achieve. Some systems only rely on keywords appearing in questions, while other systems attempt to grasp the **meaning** or **purpose** of users. This very difference leads to many different retrieval chatbot construction methods.
 
- 
-
 ## 5.4. Different "Understanding" Approaches of Retrieval-Based Chatbots
 
 Although using the same retrieval mechanism, retrieval-based chatbots can differ significantly in natural language understanding capabilities. Based on user question understanding levels, retrieval-based chatbots can be divided into three main groups.
-
- 
 
 ### 5.4.1 Keyword-Based Retrieval Chatbots
 
@@ -896,8 +890,6 @@ Commonly used techniques include **Bag-of-Words (BoW)** and **TF-IDF**, combined
 
 **Advantages**: Easy to deploy, low computational cost.
 **Limitations**: Poor semantic processing capability, difficult to recognize differently expressed but same-meaning questions.
-
- 
 
 ### 5.4.2 Semantic Retrieval Chatbots
 
@@ -911,8 +903,6 @@ Embedding models like **Word2Vec**, **GloVe**, or modern sentence embedding mode
 
 However, this chatbot type still **hasn't clearly identified user intent** but only relies on content similarity level.
 
- 
-
 ### 5.4.3 Intent Recognition-Based Retrieval Chatbots
 
 Intent recognition-based retrieval chatbots are advanced forms of retrieval-based chatbots, where systems not only evaluate semantic similarity but also identify **user intent**.
@@ -920,8 +910,6 @@ Intent recognition-based retrieval chatbots are advanced forms of retrieval-base
 User questions are first passed through intent recognition modules to assign suitable intent labels. Then, chatbots only perform retrieval within the scope of responses belonging to that intent, helping response processes become more accurate and directed.
 
 Intent recognition doesn't directly create answers but plays a **directional role for the retrieval process**, especially effective in systems with clear business structures like customer care or finance-banking.
-
- 
 
 ## 5.5. Process of Building a Retrieval Chatbot
 
@@ -936,37 +924,35 @@ Developers build a data repository including **sample question (query)** and **r
 
 > **Key point**: Knowledge repository quality and coverage directly determine chatbot intelligence.
 
- 
-
 ### Step 2: Data Representation and Digitization
 
 All sample questions need to be converted to mathematical representation forms through:
-- Keyword indexing (*Indexing*)
-- Question vectorization (*Vectorization*)
+
+- Keyword indexing (_Indexing_)
+- Question vectorization (_Vectorization_)
 
 This step helps systems quickly calculate similarity when receiving new questions.
-
- 
 
 ### Step 3: Matching & Ranking Logic
 
 The system performs:
+
 - **Calculate Similarity Score** between user questions and stored data
 - **Set Confidence Threshold**
 
-If no response exceeds the threshold, chatbots return default responses (*fallback*) to avoid wrong answers.
-
- 
+If no response exceeds the threshold, chatbots return default responses (_fallback_) to avoid wrong answers.
 
 ## 5.6. Advantages and Disadvantages
 
 ### Advantages
+
 - High accuracy
 - Easy content control
 - Low deployment cost
 - Suitable for systems requiring stability
 
 ### Disadvantages
+
 - Heavy dependence on data quality and scope
 - Difficult to respond flexibly to questions outside dataset
 - Limited natural conversation ability compared to generative chatbots
@@ -990,8 +976,6 @@ This article analyzes each method from the perspectives of **system architecture
 
 Let's begin the journey from the first Prompt!
 
- 
-
 ## 6.1. Prompt Engineering: Programming with Natural Language
 
 If you think Prompt Engineering is simply "knowing how to Google" or "casual chatting," think again. In Generative AI architecture, this is the **Soft Programming** layer.
@@ -1009,35 +993,43 @@ Technically, when you input a prompt, you don't change any model parameters (wei
 To transform an LLM from a parrot into a business processing tool, don't chat randomly. Follow the **C-R-I-O** standard framework. This structure ensures output consistency.
 
 ![C-R-I-O Framework](/static/uploads/20260118_233046_f1e373ad.png)
- 
 
 #### **C - Context (Background Data)**
+
 This is where you provide "raw materials" for the model to process. Context helps narrow the knowledge search scope, reducing hallucinations.
-* *Example:* Financial report data, text to summarize, or Database schema.
+
+- _Example:_ Financial report data, text to summarize, or Database schema.
 
 #### **R - Role (Persona)**
+
 Assign a specific "Persona." This helps adjust vocabulary probability distribution, forcing the model to use specialized language instead of common language.
-* *Weak:* "Write Python code for me..."
-* *Strong:* "You are a **Senior Backend Engineer** with 10 years of experience in Python and High-performance Computing..."
+
+- _Weak:_ "Write Python code for me..."
+- _Strong:_ "You are a **Senior Backend Engineer** with 10 years of experience in Python and High-performance Computing..."
 
 #### **I - Instruction (Logic Guidelines)**
+
 This is the most important part: Business rules the model must follow.
+
 > [!IMPORTANT]
-> Don't forget **Negative Constraints**: Clearly state what the model **MUST NOT** do. Example: *"Do not explain verbosely, just return code."*
+> Don't forget **Negative Constraints**: Clearly state what the model **MUST NOT** do. Example: _"Do not explain verbosely, just return code."_
 
 #### **O - Output (Output Format)**
+
 For software integration, output must be standardized (Machine-readable).
-* *Requirement:* "Return results as a JSON object with fields `id`, `summary`, `sentiment`."
+
+- _Requirement:_ "Return results as a JSON object with fields `id`, `summary`, `sentiment`."
 
 #### ⚔️ Real-world Example: Customer Complaint Handling
 
 Suppose you need to build a feature that automatically reads emails and categorizes complaints for CRM systems.
 
 **❌ Wrong Approach (Random Prompt):**
+
 > "Read this email and tell me what the customer is upset about and their name. Email: [Email content...]"
 
-* **Result:** Chatbot responds verbosely: *"Based on the email, I see Mr. Tran Van B is very upset because delivery was late..."*
-* **Consequence:** Backend Dev is **helpless**, cannot code to automatically capture this information.
+- **Result:** Chatbot responds verbosely: _"Based on the email, I see Mr. Tran Van B is very upset because delivery was late..."_
+- **Consequence:** Backend Dev is **helpless**, cannot code to automatically capture this information.
 
 **✅ Correct Approach (Applying C-R-I-O):**
 
@@ -1066,8 +1058,6 @@ Return result as a single JSON object following this template:
 }
 ```
 
- 
-
 ### 6.1.3. Advanced Accuracy Techniques
 
 Once you've mastered the C-R-I-O structure, apply these 2 tactics to handle "difficult" requirements where prompts typically struggle.
@@ -1078,25 +1068,24 @@ Have you noticed that if you force a student to solve math and demand "immediate
 
 **Chain-of-Thought** is simply a technique forcing AI to **"think step by step"** (like drafting) before providing final results.
 
-* **Simplest usage (Zero-shot):** Add the magic phrase *"Let's think step by step"* at the end of the prompt.
-* **Effectiveness:** Writing out reasoning steps gives AI extra "time" to self-check its logic, reducing error rates in calculation or logical reasoning tasks.
+- **Simplest usage (Zero-shot):** Add the magic phrase _"Let's think step by step"_ at the end of the prompt.
+- **Effectiveness:** Writing out reasoning steps gives AI extra "time" to self-check its logic, reducing error rates in calculation or logical reasoning tasks.
 
 **Comparison Example:**
 
-| Approach | Prompt | Actual Result |
-| :--- | :--- | :--- |
+| Approach           | Prompt                                                                              | Actual Result                                               |
+| :----------------- | :---------------------------------------------------------------------------------- | :---------------------------------------------------------- |
 | **Forced (Wrong)** | "A has 5 apples, gives B 2, buys 3 more. How many does A have? Answer immediately." | ❌ Easily answers wrong (e.g., 5) due to hasty calculation. |
-| **CoT (Correct)** | "List the process of apple count changes, then determine the result." | ✅ **Accurate:** 5 - 2 = 3; 3 + 3 = 6. <br> **Answer: 6** |
-
- 
+| **CoT (Correct)**  | "List the process of apple count changes, then determine the result."               | ✅ **Accurate:** 5 - 2 = 3; 3 + 3 = 6. <br> **Answer: 6**   |
 
 #### B. Few-Shot Prompting: "Don't Explain, Show Examples"
 
 Sometimes, writing a long paragraph to describe rules (Zero-shot) is confusing and time-consuming. Instead, leverage AI's **excellent mimicry** capability using **Few-Shot Prompting** (providing sample examples).
 
-Imagine training a new employee. Instead of handing them a thick procedure manual, you just give them 2-3 well-done sample files and say: *"Do exactly like this."*
+Imagine training a new employee. Instead of handing them a thick procedure manual, you just give them 2-3 well-done sample files and say: _"Do exactly like this."_
 
 **This technique is extremely powerful when:**
+
 1. You need AI to return unusual formats (complex JSON, specific XML).
 2. You want AI to mimic specific Tone of voice.
 
@@ -1118,8 +1107,6 @@ Customer: "Excellent, will buy again."
 AI: [Model will automatically fill: Positive]
 ```
 
- 
-
 ## 6.2. RAG (Retrieval-Augmented Generation): "Open-Book" Chatbot
 
 ### 6.2.1 Definition
@@ -1132,26 +1119,25 @@ RAG is more than just a term—it's a **tool that transforms LLMs into assistant
 ### 6.2.2 Dual Pipeline Architecture
 
 ![RAG Architecture](/static/uploads/20260118_233139_b73a4843.png)
- 
 
 RAG is divided into **two independent but closely coordinated pipelines**:
 
 #### Pipeline 1 – Ingestion (Data Loading – Offline ETL)
 
-| Step | Description | Notes |
-|------|-------------|-------|
-| **Semantic Chunking** | Split documents into *chunks* where each chunk contains one complete idea. | > [!IMPORTANT] "Garbage In, Garbage Out" – answer quality depends ~80% on this step. |
-| **Naïve Chunking** | Fixed split every 500 words. | Risk: cuts important sentences in half, loses context. |
-| **Semantic Chunking (recommended)** | Use language models to detect idea boundaries, preserving context. | Current industry standard. |
-| **Embedding** | Transform each chunk into a **vector** (number sequence) for machines to "understand" meaning. | Example: "King" vector is close to "Queen" vector. |
-| **Vector Database** | Store vectors for **fast search** (milliseconds). | Popular solutions: ChromaDB, Qdrant, Weaviate, Pinecone. |
+| Step                                | Description                                                                                    | Notes                                                                                |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Semantic Chunking**               | Split documents into _chunks_ where each chunk contains one complete idea.                     | > [!IMPORTANT] "Garbage In, Garbage Out" – answer quality depends ~80% on this step. |
+| **Naïve Chunking**                  | Fixed split every 500 words.                                                                   | Risk: cuts important sentences in half, loses context.                               |
+| **Semantic Chunking (recommended)** | Use language models to detect idea boundaries, preserving context.                             | Current industry standard.                                                           |
+| **Embedding**                       | Transform each chunk into a **vector** (number sequence) for machines to "understand" meaning. | Example: "King" vector is close to "Queen" vector.                                   |
+| **Vector Database**                 | Store vectors for **fast search** (milliseconds).                                              | Popular solutions: ChromaDB, Qdrant, Weaviate, Pinecone.                             |
 
 #### Pipeline 2 – Inference (Reasoning – Runtime)
 
 1. **Embedding** – User question is encoded into a vector.
 2. **Hybrid Search** – Combines **Vector Search** (semantic search) + **Sparse Search (BM25)** (keyword matching) to reduce "blind spots."
 3. **Top-50 Candidates** – Retrieve 50 chunks with highest similarity scores.
-4. **Reranker (Cross-Encoder)** – Re-evaluate each *question-passage pair*, keep only **Top-3-5** highest quality.
+4. **Reranker (Cross-Encoder)** – Re-evaluate each _question-passage pair_, keep only **Top-3-5** highest quality.
 5. **LLM + Context** – Combine selected chunks into prompt, LLM generates final answer.
 
 ### 6.2.3 Hybrid Search – Combining Dense & Sparse
@@ -1167,11 +1153,11 @@ The Re-ranking step is the dividing line between a "toy" RAG system (for demos) 
 
 ### 6.2.5 Query Rewriting – Question Reformation
 
-Real users often have the habit of asking very short, truncated questions heavily dependent on prior context (e.g., *"When was he born?"* after mentioning Tim Cook). If entering this question directly into databases, the returned result will be zero because machines don't know who "he" is. The solution here is applying **Query Rewriting** technique: using an intermediate LLM to rewrite questions into fully semantic forms (e.g., *"When was Tim Cook born?"*) before performing searches. This small buffer step ensures search engines always understand the correct subject and avoids undeserved "no-result" situations.
+Real users often have the habit of asking very short, truncated questions heavily dependent on prior context (e.g., _"When was he born?"_ after mentioning Tim Cook). If entering this question directly into databases, the returned result will be zero because machines don't know who "he" is. The solution here is applying **Query Rewriting** technique: using an intermediate LLM to rewrite questions into fully semantic forms (e.g., _"When was Tim Cook born?"_) before performing searches. This small buffer step ensures search engines always understand the correct subject and avoids undeserved "no-result" situations.
 
 ### 6.2.6 Citations – Source Attribution
 
-In an era where AI can fabricate information at any time, the citation feature (Citations) becomes a mandatory requirement to build Trustworthy AI. Chatbots must not only provide answers but must also clearly indicate: *"This information is from **Page 15, HR Procedures Document**"*. This transparency of data sources not only helps users easily fact-check information but also helps businesses comply with strict legal standards on data management like GDPR or ISO 27001.
+In an era where AI can fabricate information at any time, the citation feature (Citations) becomes a mandatory requirement to build Trustworthy AI. Chatbots must not only provide answers but must also clearly indicate: _"This information is from **Page 15, HR Procedures Document**"_. This transparency of data sources not only helps users easily fact-check information but also helps businesses comply with strict legal standards on data management like GDPR or ISO 27001.
 
 ### 6.2.7 Recommended Tech-stack for 2026
 
@@ -1179,37 +1165,34 @@ To build a powerful RAG system, choosing suitable tools is a crucial factor. Reg
 
 ### 6.2.8 Advantages and Disadvantages
 
-|  | ✅ Advantages | ❌ Disadvantages |
-|---|--------------|---------------------|
+|         | ✅ Advantages                                                                                                                                                        | ❌ Disadvantages                                                                                                                                                                    |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **RAG** | • **Real-time knowledge** – just upload new documents.<br>• Reduces **hallucination** – answers based on actual sources.<br>• Clear **citations** → increased trust. | • **Speed** – requires retrieval + rerank time.<br>• **Token cost** – passing multiple chunks to prompt.<br>• **Implementation effort** – ingestion, embedding, DB, search, rerank. |
-
- 
 
 ## 6.3. Fine-tuning: Training True "Experts"
 
 ### 6.3.1 Definition
+
 Fine-tuning is the process of **updating weights** of a pre-trained model using a **small, specialized** dataset. The goal is to modify the model's **behavior** or **expression style** to fit specific business context, style, and operations.
 
 ### 6.3.2 RAG vs Fine-tuning – When to Use What?
 
 ![RAG vs Fine-tuning Comparison](/static/uploads/20260118_233250_03694de1.png)
- 
 
-| Criteria | RAG | Fine-tuning |
-|----------|-----|-------------|
-| **Solves Problem** | Lack of **knowledge** (data updates) | Lack of **skills/behavior** (response style adjustment) |
-| **Example** | Bot doesn't know today's gold price | Bot responds too mechanically, no brand "voice" |
-| **Data Updates** | **Instant** – just upload new files | **Must retrain** – time and resources required |
-| **Response Speed** | **Slower** – needs retrieval + rerank | **Faster** – all information already in model |
-| **Token Cost** | **High** – passing many chunks to prompt | **Low** – just sending questions |
-| **Security** | Data might leak (sent to API) | **Absolute** – model runs offline, no external data transmission |
+| Criteria           | RAG                                      | Fine-tuning                                                      |
+| ------------------ | ---------------------------------------- | ---------------------------------------------------------------- |
+| **Solves Problem** | Lack of **knowledge** (data updates)     | Lack of **skills/behavior** (response style adjustment)          |
+| **Example**        | Bot doesn't know today's gold price      | Bot responds too mechanically, no brand "voice"                  |
+| **Data Updates**   | **Instant** – just upload new files      | **Must retrain** – time and resources required                   |
+| **Response Speed** | **Slower** – needs retrieval + rerank    | **Faster** – all information already in model                    |
+| **Token Cost**     | **High** – passing many chunks to prompt | **Low** – just sending questions                                 |
+| **Security**       | Data might leak (sent to API)            | **Absolute** – model runs offline, no external data transmission |
 
 > **TIP** – **Hybrid**: Combine RAG for latest data and a **Fine-tuned** model for **brand voice** and **standard behavior** – this is the strongest configuration for enterprise chatbots.
 
 ### 6.3.3 PEFT & LoRA Revolution
 
 ![LoRA Architecture](/static/uploads/20260118_233224_9e7e7c71.png)
- 
 
 Previously, re-training (fine-tuning) a large language model was like an exclusive game for trillion-dollar tech corporations. The traditional method, also called **Full Fine-tuning**, required updating all billions of model parameters. This not only required supercomputers with millions of USD operating costs but also harbored major risks named **"Catastrophic Forgetting"** – the phenomenon where models learn new knowledge but accidentally "completely forget" old foundational knowledge.
 
@@ -1222,9 +1205,10 @@ An even further step is the emergence of **QLoRA (Quantized LoRA)**. This techni
 In the Fine-tuning world, there's a golden rule every AI engineer knows by heart: **"Quality over Quantity"**. Reality has proven a dataset of only **500 to 1,000 "clean" samples**, thoroughly reviewed and diverse, often yields far superior results compared to a massive 100,000-sample dataset full of junk and noisy information.
 
 For models to understand and learn tasks, input data is usually standardized in **JSON** format, including three core components:
-* **Instruction (Guidance):** Describes role and specific task you want AI to perform.
-* **Input (Input):** Actual data, situations, or specific user questions.
-* **Output (Output):** Standard sample answer, correct writing style and format you want AI to learn.
+
+- **Instruction (Guidance):** Describes role and specific task you want AI to perform.
+- **Input (Input):** Actual data, situations, or specific user questions.
+- **Output (Output):** Standard sample answer, correct writing style and format you want AI to learn.
 
 **Example of a standard data sample:**
 
@@ -1243,36 +1227,41 @@ For models to understand and learn tasks, input data is usually standardized in 
 To transform a foundation model into a specialized virtual assistant, we need to go through a complete 5-step roadmap:
 
 #### 🛠 Step 1: Data Preparation
+
 This is the most important stage ("Garbage in, Garbage out").
 
-* **Collect:** Gather old chat history, internal guidance documents, consulting emails...
-* **Clean:** Remove strange characters, junk information, or sensitive personal information (PII).
-* **Format:** Convert everything to standard **JSON** or **JSONL** structure.
+- **Collect:** Gather old chat history, internal guidance documents, consulting emails...
+- **Clean:** Remove strange characters, junk information, or sensitive personal information (PII).
+- **Format:** Convert everything to standard **JSON** or **JSONL** structure.
 
 #### 🧠 Step 2: Choose Base Model
+
 Depending on problem goals (need intelligence or need speed), choose suitable "brains":
 
-| Base Model | Notable Features | Suitable For |
-| :--- | :--- | :--- |
-| **Llama 3** | 💪 **General Power** | Complex tasks needing deep logical thinking. |
-| **Mistral** | ⚡ **High Speed** | Applications needing quick responses, running on small devices. |
-| **Qwen** | 🌏 **Multilingual** | Excellent for Vietnamese and Asian languages. |
+| Base Model  | Notable Features     | Suitable For                                                    |
+| :---------- | :------------------- | :-------------------------------------------------------------- |
+| **Llama 3** | 💪 **General Power** | Complex tasks needing deep logical thinking.                    |
+| **Mistral** | ⚡ **High Speed**    | Applications needing quick responses, running on small devices. |
+| **Qwen**    | 🌏 **Multilingual**  | Excellent for Vietnamese and Asian languages.                   |
 
 #### 🔥 Step 3: Training
+
 Instead of coding from scratch, use hardware-optimized libraries to speed up training 2-5x:
 
-* **Unsloth:** Excellent VRAM optimization tool (recommended).
-* **Axolotl:** Flexible configuration via YAML file.
-* **HuggingFace TRL:** Standard library, large community.
+- **Unsloth:** Excellent VRAM optimization tool (recommended).
+- **Axolotl:** Flexible configuration via YAML file.
+- **HuggingFace TRL:** Standard library, large community.
 
 #### 📊 Step 4: Monitor Model Health
+
 During training, **Training Loss** metric is the model's heartbeat. You need to observe the chart:
 
-* ✅ **Loss decreases steadily:** Good Sign. Model is learning effectively.
-* ❌ **Loss increases gradually:** Bad Sign (**Over-fitting**). Model is "learning by rote."
-    * *Solution:* Reduce learning rate (`learning_rate`) or add more diverse data.
+- ✅ **Loss decreases steadily:** Good Sign. Model is learning effectively.
+- ❌ **Loss increases gradually:** Bad Sign (**Over-fitting**). Model is "learning by rote."
+  - _Solution:_ Reduce learning rate (`learning_rate`) or add more diverse data.
 
 #### 📦 Step 5: Packaging (Merge & Export)
+
 After training completion, you'll have a lightweight weight file (Adapter). To use easily, need to perform the final step:
 
 1. **Merge:** Mix Adapter layer (LoRA) back into base model.
@@ -1280,37 +1269,36 @@ After training completion, you'll have a lightweight weight file (Adapter). To u
 
 ### 6.3.6 Advantages & Disadvantages
 
-|  | ✅ Advantages | ❌ Disadvantages |
-|---|--------------|---------------------|
+|                 | ✅ Advantages                                                                                                                                                                               | ❌ Disadvantages                                                                                                                                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Fine-tuning** | • **Extremely fast inference** (no retrieval needed).<br>• **Low running cost** (fewer tokens).<br>• **Absolute security** – runs 100% offline.<br>• **Voice control** – meets brand style. | • Knowledge **"frozen"** at training time – no new information updates.<br>• **Hallucination** if asked beyond training data scope.<br>• Requires **experienced AI engineers** (hyper-parameter tuning, data management). |
 
 In conclusion, Fine-tuning is the way to "train experts" for LLMs, enabling enterprises to **shape behavior, tone, and accuracy** in specialized tasks. When combined with RAG (Hybrid), you get **both real-time knowledge** and **standard brand responses** – this is currently the strongest configuration for enterprise chatbots.
 
- 
-
 ## 6.4. AI Agent: The Final Evolution – Automation
 
 ### 6.4.1 Definition
+
 **AI Agent** is a system using **LLM** as the "central brain" (Reasoning Engine) to **orchestrate actions**. Instead of just generating text, Agents generate **decisions** and **call tools** to accomplish user goals. Thus, chatbots are no longer just Q&A tools but **autonomous action units** capable of interacting with real environments (APIs, databases, file systems, ...).
 
 ### 6.4.2 Agent Anatomy
+
 An effective Agent needs **four core components**:
 
-1. **Agent Core (Brain – LLM)**: Handles reasoning, generates *thoughts* and *actions*.
+1. **Agent Core (Brain – LLM)**: Handles reasoning, generates _thoughts_ and _actions_.
 2. **Memory**:
    - **Short-term** – stores conversation history and current state.
    - **Long-term** – stores experience from previous runs (typically as **Vector DB**).
-3. **Planning**: Breaks large tasks (e.g., *competitor analysis*) into **sub-tasks** executable sequentially or in parallel.
+3. **Planning**: Breaks large tasks (e.g., _competitor analysis_) into **sub-tasks** executable sequentially or in parallel.
 4. **Tools**: Actual execution interfaces – Google Search, Calculator, Python interpreter, email API, SQL queries, etc.
 
 ### 6.4.3 ReAct Loop (Reason + Act)
 
 ![ReAct Loop](/static/uploads/20260118_233343_0aa538e3.png)
- 
 
 **ReAct Process** described in five steps:
 
-1. **Thought** – LLM thinks about the request, determines which tool is needed. *Example*: "User asks about Hanoi weather, I need `get_weather` tool."
+1. **Thought** – LLM thinks about the request, determines which tool is needed. _Example_: "User asks about Hanoi weather, I need `get_weather` tool."
 2. **Action** – LLM outputs **JSON** describing tool call.
 3. **Observation** – System executes tool, returns result (e.g., `25°C, sunny`).
 4. **Reflection** – LLM evaluates if information is sufficient; if not, repeats loop.
@@ -1333,10 +1321,9 @@ An effective Agent needs **four core components**:
 
 Backend system (Python/NodeJS) **catches** this JSON, executes actual function, and **returns** result to LLM for continued reasoning. This allows Agents to **perform real actions** (send email, schedule meetings, make purchases) without user intervention.
 
-### 6.4.5 Multi-Agent Systems 
+### 6.4.5 Multi-Agent Systems
 
 ![Multi-Agent System](/static/uploads/20260118_233410_77171620.png)
- 
 
 A single Agent often faces **overload problems** and **high error rates**. Current trend is building **virtual companies** with multiple specialized Agents, coordinated under **Manager Agent** direction:
 
@@ -1349,34 +1336,31 @@ Process **repeats** until **Reviewer** confirms correct results, creating a comp
 
 ### 6.4.6 Recommended Tech-stack
 
-| Component | Tools / Libraries |
-|-----------|-------------------|
-| **Framework** | **LangGraph** – models Agent flow (graph); **CrewAI** – supports Agent team building; **Microsoft AutoGen** – Microsoft's multi-agent platform |
-| **Tool Integration** | OpenAI Function Calling, Llama-3-Tool-Use, LangChain Tools, custom Python/NodeJS adapters |
-| **Memory Store** | Vector DB (Chroma, Qdrant, Weaviate) for long-term memory; Redis / In-memory for short-term |
-| **Orchestration** | Airflow, Prefect, or LangGraph's internal workflow for ReAct loop management |
+| Component            | Tools / Libraries                                                                                                                              |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Framework**        | **LangGraph** – models Agent flow (graph); **CrewAI** – supports Agent team building; **Microsoft AutoGen** – Microsoft's multi-agent platform |
+| **Tool Integration** | OpenAI Function Calling, Llama-3-Tool-Use, LangChain Tools, custom Python/NodeJS adapters                                                      |
+| **Memory Store**     | Vector DB (Chroma, Qdrant, Weaviate) for long-term memory; Redis / In-memory for short-term                                                    |
+| **Orchestration**    | Airflow, Prefect, or LangGraph's internal workflow for ReAct loop management                                                                   |
 
 ### 6.4.7 Advantages and Disadvantages
 
-|  | ✅ Advantages | ❌ Disadvantages |
-|---|--------------|---------------------|
+|              | ✅ Advantages                                                                                                                                                                                                                                                | ❌ Disadvantages                                                                                                                                                                                                                                                                                             |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **AI Agent** | • Solves **multi-step**, complex problems.<br>• Automatically **executes real actions** (send mail, schedule, purchase).<br>• **Self-correction** – ability to fix errors through ReAct loop.<br>• Capability for **multi-tool integration** (API, DB, web). | • **High token cost** – each ReAct round consumes tokens.<br>• **Latency** – responses typically take **1-2 minutes** depending on complexity.<br>• **Risk of infinite loops** without **guardrails** (timeout, max-steps).<br>• Requires **AI engineers** to design prompts, tool wrappers, and monitoring. |
-
- 
 
 ## 6.5. Summary: Chatbot Needs Pyramid
 
 ![Chatbot Needs Pyramid](/static/uploads/20260118_233455_d39ef906.png)
- 
 
 ### Decision Matrix
 
-| Level | Method | Difficulty | Cost | Application |
-|-------|--------|-----------|------|-------------|
-| **Foundation** | Prompt Engineering | Easy | Low | Creative chat, basic content generation |
-| **Mid-Level** | RAG | Medium | Medium | Information lookup, data-driven customer support |
-| **Advanced** | Fine-tuning | Hard | High | Experts, high language/business accuracy |
-| **Peak** | AI Agent | Very Hard | Very High | Human replacement, complex task chains |
+| Level          | Method             | Difficulty | Cost      | Application                                      |
+| -------------- | ------------------ | ---------- | --------- | ------------------------------------------------ |
+| **Foundation** | Prompt Engineering | Easy       | Low       | Creative chat, basic content generation          |
+| **Mid-Level**  | RAG                | Medium     | Medium    | Information lookup, data-driven customer support |
+| **Advanced**   | Fine-tuning        | Hard       | High      | Experts, high language/business accuracy         |
+| **Peak**       | AI Agent           | Very Hard  | Very High | Human replacement, complex task chains           |
 
 ### Deployment Advice
 
@@ -1395,7 +1379,7 @@ Our team's blog ends here. Thank you for reading through this extensive blog. If
 
 1. [How Do Chatbots Work? – BotsCrew](https://botscrew.com/blog/what-are-bots/)
 2. Building Vietnamese Chatbot using LLMs and RLHF – AI Vietnam
-3. [Rubric (academic) - Wikipedia](https://en.wikipedia.org/wiki/Rubric_\(academic\))
+3. [Rubric (academic) - Wikipedia](<https://en.wikipedia.org/wiki/Rubric_(academic)>)
 4. [ConvoMem Benchmark: Why Your First 150 Conversations Don’t Need RAG](https://arxiv.org/html/2511.10523)
 5. [Introduction | Ragas](https://docs.ragas.io/en/v0.1.21/index.html)
 6. [OpenAI. (2024). "GPT-4 Technical Report"](https://arxiv.org/html/2511.10523)
@@ -1403,7 +1387,3 @@ Our team's blog ends here. Thank you for reading through this extensive blog. If
 8. [Hu et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models"](https://arxiv.org/html/2511.10523)
 9. [Yao et al. (2023). "ReAct: Synergizing Reasoning and Acting in Language Models"](https://arxiv.org/html/2511.10523)
 10. [LangChain Documentation. (2024). "Building Production-Ready RAG Systems"](https://arxiv.org/html/2511.10523)
- 
-
-
- 
