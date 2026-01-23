@@ -18,9 +18,9 @@ From relatable applications like medical diagnosis, virtual assistants, and self
 
 ```mermaid
 graph LR
-    A["💾 1. Data Collection<br/>& Processing"] --> B["🧠 2. Model<br/>Training"]
-    B --> C["🎯 3. Prediction<br/>& Inference"]
-    C --> D["📈 4. Evaluation<br/>& Optimization"]
+    A["💾 1. Data Collection<br/>and Processing"] --> B["🧠 2. Model<br/>Training"]
+    B --> C["🎯 3. Prediction<br/>and Inference"]
+    C --> D["📈 4. Evaluation<br/>and Optimization"]
     D -.->|Improve Data| A
     D -.->|Refine Model| B
     

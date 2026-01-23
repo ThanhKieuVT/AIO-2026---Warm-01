@@ -14,9 +14,9 @@ Machine Learning (ML - Học máy) không chỉ là một từ khóa công ngh�
 Từ những ứng dụng gần gũi như chẩn đoán y tế, trợ lý ảo, xe tự lái, cho đến những bài toán vĩ mô như mô hình hóa khí hậu, Machine Learning đã trở thành công cụ không thể thiếu trong nền khoa học máy tính hiện đại.
 ```mermaid
 graph LR
-    A["💾 1. Thu thập<br/>& Xử lý Dữ liệu"] --> B["🧠 2. Huấn luyện<br/>Mô hình (Training)"]
-    B --> C["🎯 3. Dự đoán<br/>& Suy luận"]
-    C --> D["📈 4. Đánh giá<br/>& Tối ưu hóa"]
+    A["💾 1. Thu thập<br/>và Xử lý Dữ liệu"] --> B["🧠 2. Huấn luyện<br/>Mô hình (Training)"]
+    B --> C["🎯 3. Dự đoán<br/>và Suy luận"]
+    C --> D["📈 4. Đánh giá<br/>và Tối ưu hóa"]
     D -.->|Cải thiện dữ liệu| A
     D -.->|Tinh chỉnh mô hình| B
     
