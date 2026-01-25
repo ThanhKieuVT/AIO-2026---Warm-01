@@ -348,6 +348,152 @@ Vì Kaggle ưu tiên thực hành nhanh, nên khóa học sẽ **không nói qu�
 
 Tóm lại, nếu bạn đang bắt đầu Machine Learning, đừng cố học mọi thứ cùng lúc. Hãy chọn một lộ trình chính để đi cho chắc, và dùng một khoá thực hành để lên tay. Bạn có thể bắt đầu nhanh với **Kaggle Intro to ML**, tăng tốc nền tảng bằng **Google MLCC**, rồi xây nền móng bài bản với **Machine Learning Specialization (Andrew Ng)**. Quan trọng nhất chính là học tới đâu hãy cố gắng làm ra một project nhỏ tới đó, đừng quá tập trung vào lý thuyết. Đó là cách nhanh nhất để đạt được tiến bộ thực sự trong lĩnh vực học máy.
   
+
+# Chương 5: Dự đoán khả năng sống sót trên tàu Titanic - Từ dữ liệu thô đến mô hình hoàn chỉnh
+
+Tiếp nối chuỗi bài viết về Machine Learning, hôm nay chúng ta sẽ cùng bắt tay vào một dự án thực tế kinh điển. Bạn đã bao giờ tự hỏi làm thế nào một cỗ máy có thể dự đoán được tương lai dựa trên những dữ liệu từ quá khứ? 
+
+Chúng ta sẽ cùng thực hiện dự án: **Phân loại hành khách sống sót trên tàu Titanic.**
+
+Đây là một bài toán **Phân loại** điển hình: Dựa trên các đặc điểm đầu vào (features) như tuổi tác, giới tính, hạng vé... mô hình AI sẽ dự đoán hành khách đó "Sống sót" (1) hay "Không sống sót" (0).
+
+> **🔗 Link Source Code (Google Colab):** [Dự án ML: Phân loại Titanic](https://colab.research.google.com/drive/1fchJJYixzJrIB0ngobCw6H7H4mHriOJc)
+
+ 
+ 
+
+Để dự án này thành công, chúng ta sẽ đi qua 5 bước tiêu chuẩn trong quy trình Machine Learning:
+1.  **Thu thập dữ liệu:** Sử dụng bộ dữ liệu Titanic Dataset nổi tiếng.
+2.  **Làm sạch dữ liệu:** Xử lý các ô trống và chuẩn hóa dữ liệu.
+3.  **Chia dữ liệu:** Tách tập Huấn luyện (Train) và Kiểm tra (Test).
+4.  **Huấn luyện:** Sử dụng thuật toán mạnh mẽ **Random Forest**.
+5.  **Đánh giá:** Kiểm tra hiệu suất của mô hình qua các chỉ số kỹ thuật.
+
+ 
+
+## Bước 1: Thu thập & Khám phá dữ liệu
+
+Đầu tiên, chúng ta nạp các thư viện cần thiết là `pandas`, `seaborn` và `matplotlib`. Chúng ta sẽ lấy dữ liệu mẫu trực tiếp từ thư viện `seaborn`.
+
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# 1. Tải bộ dữ liệu titanic
+df = sns.load_dataset('titanic')
+
+# Xem 5 dòng đầu tiên để hiểu cấu trúc dữ liệu
+print("Dữ liệu thô ban đầu:")
+print(df.head())
+
+# Kiểm tra thông tin sơ bộ (số dòng, kiểu dữ liệu, dữ liệu bị thiếu)
+print("\nThông tin dữ liệu:")
+print(df.info())
+```
+## Bước 2: Làm sạch & Tiền xử lý dữ liệu
+
+Trong Machine Learning, có một quy tắc vàng: **Garbage In, Garbage Out** (Dữ liệu rác vào, kết quả rác ra). Máy tính không hiểu chữ "male/female" và không thể tính toán trên các ô trống (NaN).
+
+**Các vấn đề cần xử lý:**
+* **Missing Values (Dữ liệu thiếu):** Điền tuổi thiếu bằng **Median** (Trung vị) để tránh sai lệch bởi các giá trị ngoại lai.
+* **Redundant Data (Dữ liệu thừa):** Loại bỏ các cột không giúp ích nhiều như `deck`, `embark_town`, `alive`.
+* **Encoding (Mã hóa):** Chuyển đổi dữ liệu dạng chữ sang dạng số.
+
+```python
+# 1. XỬ LÝ DỮ LIỆU THIẾU
+df['age'] = df['age'].fillna(df['age'].median())
+df['embarked'] = df['embarked'].fillna(df['embarked'].mode()[0])
+
+# 2. LOẠI BỎ CỘT KHÔNG CẦN THIẾT
+df = df.drop(columns=['deck', 'embark_town', 'alive', 'class', 'who', 'adult_male'])
+
+# 3. MÃ HÓA DỮ LIỆU (ENCODING)
+df['sex'] = df['sex'].map({'male': 0, 'female': 1})
+df = pd.get_dummies(df, columns=['embarked'], drop_first=True)
+
+print("\nDữ liệu sau khi làm sạch:")
+print(df.head())
+```
+
+## Bước 3: Chia tập dữ liệu (Train/Test Split)
+
+Chúng ta tách dữ liệu theo tỉ lệ **80:20** để đảm bảo mô hình không bị "học vẹt":
+* **Tập Train (80%):** Dùng để huấn luyện mô hình.
+* **Tập Test (20%):** Dùng để đánh giá khách quan sức mạnh dự báo.
+
+```python
+from sklearn.model_selection import train_test_split
+
+X = df.drop('survived', axis=1) 
+y = df['survived']              
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+```
+
+
+## Bước 4: Huấn luyện mô hình (Training)
+
+Chúng ta sẽ sử dụng mô hình **Random Forest Classifier**. Đây là một thuật toán cực kỳ mạnh mẽ và phổ biến trong Machine Learning.
+
+> **Ý tưởng:** Hãy tưởng tượng thay vì hỏi ý kiến của duy nhất một chuyên gia, bạn hỏi ý kiến của 100 người khác nhau (đại diện cho 100 cây quyết định - Decision Trees). Mỗi người sẽ đưa ra một dự đoán, và kết quả cuối cùng sẽ dựa trên ý kiến của đa số. Cách làm này giúp mô hình giảm thiểu sai sót và hoạt động ổn định hơn.
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+# Khởi tạo mô hình với 100 cây quyết định
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+
+# Bắt đầu quá trình huấn luyện (máy học từ dữ liệu Train)
+print("Đang huấn luyện mô hình...")
+model.fit(X_train, y_train)
+print("Huấn luyện hoàn tất!")
+```
+## Bước 5: Đánh giá mô hình (Evaluation)
+
+Sau khi máy đã "học" xong, chúng ta sẽ cho mô hình làm bài kiểm tra trên tập dữ liệu `X_test` (dữ liệu máy chưa từng thấy) và so sánh kết quả dự đoán với đáp án thật `y_test`.
+
+**Các chỉ số đánh giá quan trọng:**
+1. **Accuracy (Độ chính xác):** Tỉ lệ dự đoán đúng trên tổng số hành khách.
+2. **Precision:** Trong số những người máy dự đoán là "Sống", có bao nhiêu % thực sự sống?
+3. **Recall (Độ phủ):** Trong số những người thực tế đã sống, máy tìm ra được bao nhiêu %?
+
+```python
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+# Cho mô hình dự đoán thử trên tập test
+y_pred = model.predict(X_test)
+
+# 1. Tính Accuracy
+acc = accuracy_score(y_test, y_pred)
+print(f"\nĐộ chính xác tổng quát (Accuracy): {acc*100:.2f}%")
+
+# 2. Báo cáo chi tiết (Precision, Recall, F1-score)
+print("\nBáo cáo chi tiết:")
+print(classification_report(y_test, y_pred))
+
+# 3. Ma trận nhầm lẫn (Confusion Matrix)
+print("\nMa trận nhầm lẫn:")
+cm = confusion_matrix(y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt='d', cmap='Greens')
+plt.xlabel('Dự đoán của máy')
+plt.ylabel('Thực tế')
+plt.show()
+```
+
+ 
+
+Dự án Titanic không chỉ là một bài toán dự đoán đơn thuần, mà còn là bài học vỡ lòng tuyệt vời về quy trình xử lý dữ liệu trong AI. Chúng ta thấy rằng: **Dữ liệu sạch + Thuật toán phù hợp = Kết quả tin cậy.**
+
+Hy vọng bài viết này đã giúp bạn hình dung rõ hơn về cách xây dựng một dự án Machine Learning từ những bước đầu tiên.
+
+ 
+
+**Cảm ơn các bạn đã dành thời gian đọc bài blog!** Nếu có bất kỳ câu hỏi nào về code hay quy trình thực hiện, hãy để lại bình luận phía dưới nhé. 
+
+Chúc các bạn học tốt! 🚀
+
+  
 ## Tài liệu tham khảo
 
 1. [How Do Chatbots Work? – BotsCrew](https://botscrew.com/blog/what-are-bots/)
