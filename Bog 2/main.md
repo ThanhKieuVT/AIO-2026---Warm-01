@@ -505,7 +505,8 @@ plt.show()
     <em>Hình 5.3: Ma trận nhầm lẫn, biểu đồ phân bố.</em>
   </figcaption>
 </figure>
-Bog 2/image/Titanic.png
+
+
 Dự án Titanic không chỉ là một bài toán dự đoán đơn thuần, mà còn là bài học vỡ lòng tuyệt vời về quy trình xử lý dữ liệu trong AI. Chúng ta thấy rằng: **Dữ liệu sạch + Thuật toán phù hợp = Kết quả tin cậy.**
 
 Hy vọng bài viết này đã giúp bạn hình dung rõ hơn về cách xây dựng một dự án Machine Learning từ những bước đầu tiên.
