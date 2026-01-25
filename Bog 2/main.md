@@ -1,3 +1,5 @@
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/2bc7c71e-7ac1-4fb4-a4e3-0609dcceac60" />
+
 # Chào Mừng Đến Với Blog Học Machine Learning Cơ Bản  
 Chào mừng bạn đến với hành trình khám phá thế giới đầy thú vị của Machine Learning! 👋🤖
 ## Về Blog Này
