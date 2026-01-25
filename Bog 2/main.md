@@ -485,6 +485,7 @@ plt.xlabel('Dự đoán của máy')
 plt.ylabel('Thực tế')
 plt.show()
 ```
+<img width="531" height="433" alt="image" src="[Bog 2/image/Titanic.png](https://github.com/ThanhKieuVT/AIO-2026---Warm-01/blob/3a13a67e021a4fe980a3ef414d4b83e3d3f70b0f/Bog%202/image/Titanic.png)" />
 
  
 
