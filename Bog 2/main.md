@@ -394,6 +394,7 @@ print(df.info())
 ## Bước 2: Làm sạch & Tiền xử lý dữ liệu
 
 Trong Machine Learning, có một quy tắc vàng: **Garbage In, Garbage Out** (Dữ liệu rác vào, kết quả rác ra). Máy tính không hiểu chữ "male/female" và không thể tính toán trên các ô trống (NaN).
+<img width="3999" height="2599" alt="image" src="https://github.com/user-attachments/assets/d06c0063-866a-4e81-874f-fc67e9a981dc" />
 
 **Các vấn đề cần xử lý:**
 * **Missing Values (Dữ liệu thiếu):** Điền tuổi thiếu bằng **Median** (Trung vị) để tránh sai lệch bởi các giá trị ngoại lai.
