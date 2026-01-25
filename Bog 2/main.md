@@ -1,5 +1,3 @@
-<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/2bc7c71e-7ac1-4fb4-a4e3-0609dcceac60" />
-
 # Chào Mừng Đến Với Blog Học Machine Learning Cơ Bản  
 Chào mừng bạn đến với hành trình khám phá thế giới đầy thú vị của Machine Learning! 👋🤖
 ## Về Blog Này
@@ -445,8 +443,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 Chúng ta sẽ sử dụng mô hình **Random Forest Classifier**. Đây là một thuật toán cực kỳ mạnh mẽ và phổ biến trong Machine Learning.
 Đọc thêm về Random Forest Classifier: https://catalyst.earth/catalyst-system-files/professional-help/concepts/focus_c/oa_classif_intro_rt.html
-<img width="531" height="433" alt="image" src="Bog 2/image/DataCleaning.jpg" />
 
+<figure>
+  <img src="./images/RandomForestClassifier.pnj.png" 
+       alt="Random Forest Classifie" 
+       width="999">
+  <figcaption>
+    <em>Hình 5.2: Mô hình **Random Forest Classifier.</em>
+  </figcaption>
+</figure>
 
 > **Ý tưởng:** Hãy tưởng tượng thay vì hỏi ý kiến của duy nhất một chuyên gia, bạn hỏi ý kiến của 100 người khác nhau (đại diện cho 100 cây quyết định - Decision Trees). Mỗi người sẽ đưa ra một dự đoán, và kết quả cuối cùng sẽ dựa trên ý kiến của đa số. Cách làm này giúp mô hình giảm thiểu sai sót và hoạt động ổn định hơn.
 
@@ -492,9 +497,15 @@ plt.xlabel('Dự đoán của máy')
 plt.ylabel('Thực tế')
 plt.show()
 ```
-<img width="531" height="433" alt="image" src="Bog 2/image/Titanic.png" />
-
-
+<figure>
+  <img src="./images/Titanic.png" 
+       alt="Titanic" 
+       width="531">
+  <figcaption>
+    <em>Hình 5.3: Ma trận nhầm lẫn, biểu đồ phân bố.</em>
+  </figcaption>
+</figure>
+Bog 2/image/Titanic.png
 Dự án Titanic không chỉ là một bài toán dự đoán đơn thuần, mà còn là bài học vỡ lòng tuyệt vời về quy trình xử lý dữ liệu trong AI. Chúng ta thấy rằng: **Dữ liệu sạch + Thuật toán phù hợp = Kết quả tin cậy.**
 
 Hy vọng bài viết này đã giúp bạn hình dung rõ hơn về cách xây dựng một dự án Machine Learning từ những bước đầu tiên.
