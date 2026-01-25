@@ -439,7 +439,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 Chúng ta sẽ sử dụng mô hình **Random Forest Classifier**. Đây là một thuật toán cực kỳ mạnh mẽ và phổ biến trong Machine Learning.
 Đọc thêm về Random Forest Classifier: https://catalyst.earth/catalyst-system-files/professional-help/concepts/focus_c/oa_classif_intro_rt.html
-<img width="999" height="554" alt="image" src="https://github.com/user-attachments/assets/97c18edf-3a29-4895-a0d3-771d79b3422b" />
+Bog 2/image/RandomForestClassifier.pnj.png
 
 > **Ý tưởng:** Hãy tưởng tượng thay vì hỏi ý kiến của duy nhất một chuyên gia, bạn hỏi ý kiến của 100 người khác nhau (đại diện cho 100 cây quyết định - Decision Trees). Mỗi người sẽ đưa ra một dự đoán, và kết quả cuối cùng sẽ dựa trên ý kiến của đa số. Cách làm này giúp mô hình giảm thiểu sai sót và hoạt động ổn định hơn.
 
