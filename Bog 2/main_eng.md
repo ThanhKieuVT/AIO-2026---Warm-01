@@ -1,3 +1,5 @@
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/357189ff-9070-40c7-9875-52b9dbe98851" />
+
 # Welcome to the Fundamentals of Machine Learning
 
 Welcome to your journey into the fascinating world of Machine Learning! 👋🤖
