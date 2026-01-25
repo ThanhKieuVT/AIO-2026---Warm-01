@@ -485,9 +485,8 @@ plt.xlabel('Dự đoán của máy')
 plt.ylabel('Thực tế')
 plt.show()
 ```
-<img width="531" height="433" alt="image" src="[Bog 2/image/Titanic.png](https://github.com/ThanhKieuVT/AIO-2026---Warm-01/blob/3a13a67e021a4fe980a3ef414d4b83e3d3f70b0f/Bog%202/image/Titanic.png)" />
+<img width="531" height="433" alt="image" src="Bog 2/image/Titanic.png" />
 
- 
 
 Dự án Titanic không chỉ là một bài toán dự đoán đơn thuần, mà còn là bài học vỡ lòng tuyệt vời về quy trình xử lý dữ liệu trong AI. Chúng ta thấy rằng: **Dữ liệu sạch + Thuật toán phù hợp = Kết quả tin cậy.**
 
