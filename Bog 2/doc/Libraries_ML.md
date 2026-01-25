@@ -49,6 +49,16 @@ print(C)
 
 ### 4.2.1. Pandas và DataFrame là gì?
 
+Trong Machine Learning, dữ liệu đầu vào thường tồn tại ở dạng **bảng** (giống Excel, CSV, SQL table).  
+Pandas là một thư viện **mã nguồn mở** của Python, được sử dụng rộng rãi để **đọc, xử lý, làm sạch và phân tích dữ liệu** trước khi đưa vào mô hình học máy.
+
+Cấu trúc dữ liệu quan trọng nhất trong Pandas là **DataFrame** – một bảng gồm:
+
+- Các **hàng (rows)**: mỗi hàng là một bản ghi dữ liệu
+- Các **cột (columns)**: mỗi cột là một đặc trưng (feature)
+
+Ví dụ một bảng dữ liệu dạng DataFrame:
+
 | id  | name | age | salary |
 | --- | ---- | --- | ------ |
 | 1   | An   | 22  | 500    |
@@ -56,9 +66,11 @@ print(C)
 | 3   | Chi  | 28  | 800    |
 | 4   | Dũng | 42  | 1500   |
 
-Pandas là một công cụ **mã nguồn mở** dùng cho **phân tích và xử lý dữ liệu**. Với Pandas, bạn có thể làm việc với **DataFrame** – một cấu trúc dữ liệu dạng bảng, **tương tự như file Excel**, rất thuận tiện cho việc đọc, chỉnh sửa và phân tích dữ liệu.
+DataFrame rất giống file Excel nên **dễ đọc, dễ chỉnh sửa và thuận tiện cho phân tích dữ liệu**.
 
 Trong thực tế, dữ liệu thực tế thường **thiếu giá trị**, lẫn **dữ liệu sai**, **không đúng định dạng**. Do vậy, chung ta phải **làm sạch dữ liệu trước** khi train model.
+
+Ví dụ một bảng dữ liệu trong thực tế:
 
 | name | age      | salary |
 | ---- | -------- | ------ |
@@ -154,3 +166,76 @@ Kết quả nhận được:
   <img src="../image/libraries_ml_2.png" alt="" width="700">
   <figcaption><em></em></figcaption>
 </figure>
+
+# 4.4. Scikit-learn – Thư viện Machine Learning cơ bản
+
+## 4.4.1. Scikit-learn là gì? Dùng khi nào?
+
+Scikit-learn (sklearn) là thư viện Machine Learning phổ biến nhất trong Python, cung cấp sẵn các **thuật toán ML cơ bản** và các **công cụ hỗ trợ toàn bộ quá trình huấn luyện mô hình**.
+
+Scikit-learn thường được dùng khi:
+
+- Dữ liệu đã được **làm sạch và chuyển về dạng số** (bằng NumPy, Pandas)
+- Cần **train, đánh giá và so sánh model** nhanh chóng
+- Làm các bài toán Machine Learning cổ điển:
+  - Regression (hồi quy)
+  - Classification (phân loại)
+  - Clustering (phân cụm)
+
+---
+
+## 4.4.2. Quy trình Machine Learning cơ bản với Scikit-learn
+
+Một bài toán Machine Learning cơ bản với Scikit-learn thường gồm các bước:
+
+1. Chuẩn bị dữ liệu (X, y)
+2. Chia tập train / test
+3. Chọn mô hình
+4. Train mô hình
+5. Đánh giá kết quả
+
+---
+
+## 4.4.3. Ví dụ minh họa với Scikit-learn
+
+### Ví dụ 1: Bài toán hồi quy tuyến tính (Linear Regression)
+
+Dự đoán **lương theo tuổi** (ví dụ minh họa đơn giản).
+
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Dữ liệu
+X = np.array([[22], [35], [28], [42]])  # tuổi
+y = np.array([500, 1200, 800, 1500])    # lương
+
+# Tạo model
+model = LinearRegression()
+
+# Train model
+model.fit(X, y)
+
+# Dự đoán
+pred = model.predict([[30]])
+print(pred)
+```
+
+---
+
+### Ví dụ 2: Bài toán phân loại (Classification)
+
+Ví dụ đơn giản: phân loại **đậu / rớt** dựa trên điểm số.
+
+```python
+from sklearn.linear_model import LogisticRegression
+
+# Dữ liệu
+X = [[5], [6], [7], [8], [9]]
+y = [0, 0, 0, 1, 1]  # 0: rớt, 1: đậu
+
+model = LogisticRegression()
+model.fit(X, y)
+
+print(model.predict([[7.5]]))
+```
