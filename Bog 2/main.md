@@ -7,30 +7,29 @@ Nhưng thực chất, **Machine Learning là gì?** Làm thế nào một cỗ m
 
 Blog này ra đời để cùng bạn giải mã những câu hỏi đó. Tại đây, mình sẽ chia sẻ chuỗi bài viết từ cơ bản đến nâng cao, được đơn giản hóa để bất kỳ ai cũng có thể tiếp cận. Dù bạn là sinh viên, một lập trình viên muốn lấn sân sang mảng AI, hay đơn giản là một người yêu thích công nghệ, hy vọng bạn sẽ tìm thấy những hành trang giá trị tại trạm dừng chân này.
 
+---
 # Chương 1: Machine Learning là gì?  
-## 1. Giới thiệu
+## 1.1 Giới thiệu
 Machine Learning (ML - Học máy) không chỉ là một từ khóa công nghệ, mà đã trở thành động lực cốt lõi cho cuộc cách mạng kỹ thuật số thế kỷ 21. Nó thay đổi căn bản cách con người giải quyết vấn đề: thay vì lập trình cứng nhắc, chúng ta dạy máy tính tự học.
 
 Từ những ứng dụng gần gũi như chẩn đoán y tế, trợ lý ảo, xe tự lái, cho đến những bài toán vĩ mô như mô hình hóa khí hậu, Machine Learning đã trở thành công cụ không thể thiếu trong nền khoa học máy tính hiện đại.
-```mermaid
-graph LR
-    A["💾 1. Thu thập<br/>và Xử lý Dữ liệu"] --> B["🧠 2. Huấn luyện<br/>Mô hình (Training)"]
-    B --> C["🎯 3. Dự đoán<br/>và Suy luận"]
-    C --> D["📈 4. Đánh giá<br/>và Tối ưu hóa"]
-    D -.->|Cải thiện dữ liệu| A
-    D -.->|Tinh chỉnh mô hình| B
-    
-    style A fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
-    style B fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
-    style C fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-```
-## 2. Định nghĩa và khái niệm cơ bản
-### 2.1 Định nghĩa
+
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_200629_6a1402ee.png
+" 
+       alt="supervised learning" 
+       width="700">
+  <figcaption>
+    <em>Hình 1.1: Quy trình cơ bản của một bài toán học máy</em>
+  </figcaption>  
+</figure>
+
+## 1.2. Định nghĩa và khái niệm cơ bản
+### 1.2.1 Định nghĩa
 
 Machine Learning là một nhánh của **Trí tuệ nhân tạo (AI)**, tập trung vào việc xây dựng các thuật toán và mô hình thống kê giúp máy tính có khả năng **"học"** từ dữ liệu. Thay vì được lập trình chi tiết cho từng tình huống, hệ thống sẽ tự cải thiện hiệu suất của mình thông qua kinh nghiệm.
 
-### 2.2 Công thức hóa (Theo Tom Mitchell)
+### 1.2.2 Công thức hóa (Theo Tom Mitchell)
 Về mặt toán học và khoa học, một bài toán Machine Learning được định nghĩa chuẩn mực như sau:
 
 > "Một chương trình máy tính được gọi là học từ kinh nghiệm **$E$** đối với một lớp tác vụ **$T$** và thước đo hiệu suất **$P$**, nếu hiệu suất của nó đối với tác vụ **$T$**, được đo bởi **$P$**, cải thiện theo kinh nghiệm **$E$**."
@@ -40,7 +39,7 @@ Về mặt toán học và khoa học, một bài toán Machine Learning đượ
 * **Kinh nghiệm ($E$):** Xem xét các email đã được người dùng dán nhãn trước đó.
 * **Hiệu suất ($P$):** Tỷ lệ phần trăm số email được phân loại chính xác.
 
-### 2.3 Sự chuyển dịch mô hình
+### 1.2.3 Sự chuyển dịch mô hình
 Sự khác biệt lớn nhất giữa Lập trình truyền thống và Machine Learning nằm ở **luồng đi của dữ liệu và quy tắc**:
 
 * **Lập trình Truyền thống:** Con người phải hiểu vấn đề, viết ra các quy tắc (luật/logic) để máy tính xử lý dữ liệu và đưa ra kết quả.
@@ -50,24 +49,26 @@ $$\text{Dữ liệu} + \text{Quy tắc (Code)} \rightarrow \text{Kết quả}$$
 $$\text{Dữ liệu} + \text{Kết quả (Output)} \rightarrow \text{Quy tắc (Mô hình)}$$
 
 **Mục tiêu cốt lõi:**
-Mục tiêu là tìm ra một hàm số $f: X \to Y$ sao cho nó ánh xạ đầu vào $X$ tới đầu ra $Y$ một cách chính xác nhất. Quan trọng hơn, hàm số này phải có khả năng **tổng quát hóa (generalization)** – tức là hoạt động tốt ngay cả với những dữ liệu mới mà nó chưa từng thấy trong quá trình huấn luyện.
+Mục tiêu là tìm ra một hàm số $f: X \to Y$ sao cho nó ánh xạ đầu vào $X$ tới đầu ra $Y$ một cách chính xác nhất. Quan trọng hơn, hàm số này phải có khả năng **tổng quát hóa** – tức là hoạt động tốt ngay cả với những dữ liệu mới mà nó chưa từng thấy trong quá trình huấn luyện.
 
-## 2. Phân nhóm các thuật toán machine learning
+---
+## Chương 2. Phân nhóm các thuật toán machine learning
 
-### 2.1 Supervised learning (Học có giám sát)
+### 2.1 Supervised learning  
 
-**Supervised learning** là phương pháp học máy trong đó mô hình được huấn luyện trên tập dữ liệu **đã được gán nhãn**. Mỗi mẫu dữ liệu bao gồm **đầu vào** và **đầu ra** mong muốn. Mục tiêu của mô hình là học được mối quan hệ ánh xạ từ đầu vào sang đầu ra để có thể dự đoán chính xác nhãn của các dữ liệu mới **chưa từng quan sát**.
+**Supervised learning - Học có giám sát** là phương pháp học máy trong đó mô hình được huấn luyện trên tập dữ liệu **đã được gán nhãn**. Mỗi mẫu dữ liệu bao gồm **đầu vào** và **đầu ra** mong muốn. Mục tiêu của mô hình là học được mối quan hệ ánh xạ từ đầu vào sang đầu ra để có thể dự đoán chính xác nhãn của các dữ liệu mới **chưa từng quan sát**.
 
 **Ví dụ:**  
 Trong bài toán phân loại các bức ảnh chó mèo, ta có dữ liệu huấn luyện gồm hàng nghìn bức ảnh đã được gán nhãn sẵn là `"cat"` hoặc `"dog"`. Chúng ta đưa các bức ảnh này vào trong một thuật toán và chỉ cho nó biết mỗi bức ảnh tương ứng là chó hay mèo. Sau khi thuật toán tạo ra một mô hình, tức một hàm số mà đầu vào là một bức ảnh và đầu ra là một nhãn, khi nhận được một bức ảnh mới mà mô hình **chưa nhìn thấy bao giờ**, nó sẽ dự đoán bức ảnh đó là chó hay mèo.
 
-<figure>
-  <img src="./images/supervised learning.png" 
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_194206_20e52406.png" 
        alt="supervised learning" 
        width="700">
   <figcaption>
-    <em>Hình 2.1: Quy trình supervised learning.</em>
-  </figcaption>
+    <em>Hình 2.1: Quy trình supervised learning Nguồn[1]</em>
+  </figcaption> 
+
 </figure>
 
 **Ứng dụng:**  
@@ -107,9 +108,9 @@ Một căn nhà rộng x m2, có y phòng ngủ và cách trung tâm thành ph�
 
  
 
-### 2.2 Unsupervised learning (Học không giám sát)
+### 2.2 Unsupervised learning 
 
-**Unsupervised learning** là phương pháp học máy trong đó dữ liệu huấn luyện **không có nhãn**. Thuật toán sẽ dựa vào cấu trúc của dữ liệu để thực hiện một công việc nào đó, ví dụ như phân nhóm (clustering) hoặc giảm số chiều của dữ liệu (dimension reduction) để thuận tiện trong việc lưu trữ và tính toán.
+**Unsupervised learning - Học không giám sát** là phương pháp học máy trong đó dữ liệu huấn luyện **không có nhãn**. Thuật toán sẽ dựa vào cấu trúc của dữ liệu để thực hiện một công việc nào đó, ví dụ như phân nhóm (clustering) hoặc giảm số chiều của dữ liệu (dimension reduction) để thuận tiện trong việc lưu trữ và tính toán.
 
 Supervised learning phù hợp khi dữ liệu đã được gán nhãn và mục tiêu là dự đoán chính xác đầu ra. Ngược lại, Unsupervised learning được sử dụng khi dữ liệu chưa có nhãn, nhằm khám phá cấu trúc hoặc mẫu hình ẩn trong dữ liệu.
 
@@ -120,21 +121,22 @@ Các bài toán Unsupervised learning được tiếp tục chia nhỏ thành ha
 
  
 
-#### 2.2.1 Clustering (phân nhóm)
+#### 2.2.1 Clustering  
 
 Là một bài toán phân nhóm toàn bộ dữ liệu X thành các nhóm nhỏ dựa trên sự liên quan giữa các dữ liệu trong mỗi nhóm.
 
 **Ví dụ:** Phân cụm khách hàng  
 Giả sử ta có dữ liệu của hàng nghìn khách hàng, bao gồm các đặc trưng như độ tuổi, thu nhập, tần suất mua sắm và giá trị hóa đơn trung bình. Tập dữ liệu này không chứa nhãn cho biết khách hàng thuộc nhóm nào. Thuật toán học không giám sát được áp dụng để tự động phân chia các khách hàng thành những cụm khác nhau dựa trên mức độ tương đồng của các đặc trưng. Kết quả phân cụm giúp doanh nghiệp nhận diện các nhóm khách hàng có hành vi tương tự mà không cần thông tin phân loại có sẵn trước đó.
 
-<figure>
-  <img src="./images/clustering.png" 
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_194439_e5fd84b6.png" 
        alt="clustering" 
        width="700">
   <figcaption>
-    <em>Figure 2.2: Phân cụm khách hàng.</em>
+    <em>Hình 2.2: Phân cụm khách hàng. Nguồn[2]</em>
   </figcaption>
 </figure>
+ 
 
 **Một số thuật toán tiêu biểu:**  
 - K-means  
@@ -157,9 +159,9 @@ những khách hàng nam mua quần áo thường có xu hướng mua thêm đ�
 
  
 
-### 2.3 Semi-supervised learning (Học bán giám sát)
+### 2.3 Semi-supervised learning 
 
-**Semi-supervised learning** là phương pháp học máy kết hợp giữa học có giám sát và học không giám sát, trong đó tập dữ liệu huấn luyện gồm một phần nhỏ dữ liệu có nhãn và một phần lớn dữ liệu không có nhãn. Mục tiêu là tận dụng dữ liệu không nhãn để cải thiện hiệu quả học so với việc chỉ sử dụng dữ liệu có nhãn.
+**Semi-supervised learning - Học bán giám sát** là phương pháp học máy kết hợp giữa học có giám sát và học không giám sát, trong đó tập dữ liệu huấn luyện gồm một phần nhỏ dữ liệu có nhãn và một phần lớn dữ liệu không có nhãn. Mục tiêu là tận dụng dữ liệu không nhãn để cải thiện hiệu quả học so với việc chỉ sử dụng dữ liệu có nhãn.
 
 **Ví dụ:**  
 Trong bài toán nhận dạng chữ viết tay, giả sử ta chỉ có một số ít ảnh chữ số được gán nhãn chính xác, trong khi phần lớn ảnh còn lại không có nhãn. Thuật toán học bán giám sát sử dụng các ảnh đã gán nhãn để định hướng quá trình học, đồng thời khai thác cấu trúc của dữ liệu không nhãn nhằm nâng cao độ chính xác khi dự đoán chữ số trong các ảnh mới.
@@ -173,9 +175,9 @@ Semi-supervised learning được sử dụng rộng rãi trong các bài toán 
 
  
 
-### 2.4 Reinforcement learning (Học tăng cường)
+### 2.4 Reinforcement learning 
 
-Reinforcement learning là phương pháp học máy trong đó một **tác nhân (agent)** học cách đưa ra hành động thông qua tương tác trực tiếp với **môi trường**. Thay vì học từ dữ liệu có nhãn, tác nhân nhận được **phần thưởng (reward)** hoặc **hình phạt (penalty)** sau mỗi hành động và dần dần học được chiến lược tối ưu nhằm tối đa hóa tổng phần thưởng trong dài hạn.
+**Reinforcement learning - Học tăng cường** là phương pháp học máy trong đó một **tác nhân (agent)** học cách đưa ra hành động thông qua tương tác trực tiếp với **môi trường**. Thay vì học từ dữ liệu có nhãn, tác nhân nhận được **phần thưởng (reward)** hoặc **hình phạt (penalty)** sau mỗi hành động và dần dần học được chiến lược tối ưu nhằm tối đa hóa tổng phần thưởng trong dài hạn.
 
 **Ví dụ:** Robot học cách di chuyển  
 Giả sử một robot được đặt trong một môi trường có nhiều chướng ngại vật và mục tiêu cần đạt tới. Robot không được cung cấp trước đường đi đúng mà chỉ nhận được phần thưởng khi tiến gần đến mục tiêu và hình phạt khi va chạm hoặc đi sai hướng. Thông qua quá trình tương tác liên tục với môi trường và thử–sai các hành động, robot dần học được một chiến lược tối ưu để di chuyển đến mục tiêu với hiệu quả cao nhất.
@@ -188,7 +190,7 @@ Reinforcement learning phù hợp với các bài toán ra quyết định tuầ
 - SARSA  
 - Deep Q-Network (DQN)
 
-
+---
 # Chương 3: Lộ trình 4 Bước Cho Người Mới Bắt Đầu
 
 Đối với người mới, thuật ngữ "Machine Learning" thường bị bao phủ bởi lớp sương mù của những công thức toán học khô khan và thuật toán phức tạp. Điều này dễ dẫn đến tâm lý e ngại. Tuy nhiên, sự thật là bạn không cần phải là một thiên tài toán học để bắt đầu.
@@ -275,7 +277,253 @@ Khi đã thành thạo các thuật toán cổ điển (Classical ML), bạn đ�
     * *Computer Vision (Thị giác máy tính):* Xử lý hình ảnh, video.
     * *NLP (Xử lý ngôn ngữ tự nhiên):* Xử lý văn bản, giọng nói (như ChatGPT).
 
-# Chương 4: Các khóa học Machine Learning cho người mới bắt đầu
+---
+# Chương 4: Tìm hiểu các thư viện 
+
+Python cung cấp một hệ sinh thái các thư viện phục vụ cho việc **xử lý dữ liệu, phân tích và trực quan hóa**. Thư viện là tập hợp các hàm và đối tượng đã được xây sẵn. Bạn có thể sử dụng các thư viện này thay vì viết lại mọi thứ từ đầu.
+
+Trong python, có 4 thư viện bắt buộc phải biết khi mới bước chân vào Machine Learning:
+
+- NumPy
+- Pandas
+- Matplotlib/ Seaborn
+- Scikit-learn
+  Hãy hiểu **mỗi thư viện làm gì, dùng lúc nào**, không cần đào sâu lý thuyết ngay.
+
+## 4.1. NumPy - Nền tảng xử lý số liệu 
+
+### 4.1.1. Định nghĩa  
+
+NumPy giúp bạn thực hiện các **phép toán số học** trên dữ liệu. Với NumPy, bạn có thể **chuyển đổi nhiều dạng dữ liệu khác nhau về dạng số**.
+
+Trong Machine Learning, dữ liệu đôi khi không ở dạng số, vì vậy NumPy đóng vai trò rất quan trọng trong việc xử lý và **biểu diễn toàn bộ dữ liệu nhận được dưới dạng số** để máy có thể học được.
+
+### 4.1.2. Ví dụ minh họa với NumPy 
+
+#### Ví dụ 1: Tạo mảng số
+
+```python
+import numpy as np
+
+# Tạo mảng 1 chiều
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+```
+
+#### Ví dụ 2: Nhân ma trận:
+
+```python
+import numpy as np
+
+A = np.array([[1, 2],
+              [3, 4]])
+
+B = np.array([[5, 6],
+              [7, 8]])
+
+C = A @ B   # Nhân ma trận
+print(C)
+```
+
+## 4.2. Pandas - Làm việc với dữ liệu dạng bảng 
+
+### 4.2.1. Pandas và DataFrame là gì?
+
+Trong Machine Learning, dữ liệu đầu vào thường tồn tại ở dạng **bảng** (giống Excel, CSV, SQL table).  
+Pandas là một thư viện **mã nguồn mở** của Python, được sử dụng rộng rãi để **đọc, xử lý, làm sạch và phân tích dữ liệu** trước khi đưa vào mô hình học máy.
+
+Cấu trúc dữ liệu quan trọng nhất trong Pandas là **DataFrame** – một bảng gồm:
+
+- Các **hàng (rows)**: mỗi hàng là một bản ghi dữ liệu
+- Các **cột (columns)**: mỗi cột là một đặc trưng (feature)
+
+Ví dụ một bảng dữ liệu dạng DataFrame:
+
+| id  | name | age | salary |
+| --- | ---- | --- | ------ |
+| 1   | An   | 22  | 500    |
+| 2   | Bình | 35  | 1200   |
+| 3   | Chi  | 28  | 800    |
+| 4   | Dũng | 42  | 1500   |
+
+DataFrame rất giống file Excel nên **dễ đọc, dễ chỉnh sửa và thuận tiện cho phân tích dữ liệu**.
+
+Trong thực tế, dữ liệu thực tế thường **thiếu giá trị**, lẫn **dữ liệu sai**, **không đúng định dạng**. Do vậy, chung ta phải **làm sạch dữ liệu trước** khi train model.
+
+Ví dụ một bảng dữ liệu trong thực tế:
+
+| name | age      | salary |
+| ---- | -------- | ------ |
+| An   | 22       | 500    |
+| Bình |          | 1200   |
+| Chi  | 28       | ???    |
+| Dũng | bốn mươi | 1500   |
+
+### 4.2.2. Ví dụ minh họa với Pandas 
+
+#### Ví dụ 1: Tạo một DataFrame giống Excel 
+
+```python
+import pandas as pd
+
+data = {
+    "name": ["An", "Bình", "Chi", "Dũng"],
+    "age": [22, 35, 28, 42],
+    "salary": [500, 1200, 800, 1500]
+}
+
+df = pd.DataFrame(data)
+print(df)
+```
+
+Kết quả nhận được:
+
+```
+   name  age  salary
+0   An   22     500
+1  Bình  35    1200
+2  Chi   28     800
+3  Dũng  42    1500
+```
+
+#### Ví dụ 2: Thống kê nhanh trên DataFrame:
+
+```python
+df.describe()
+```
+
+Kết quả nhận được:
+
+```t
+       age    salary
+mean   31.75  1000
+min    22     500
+max    42     1500
+```
+
+# 4.3. Matplotlib / Seaborn - Trực quan hóa dữ liệu 
+
+### 4.3.1. Matplotlib và Seaborn là gì?
+
+Matplotlib và Seaborn là 2 thư viện phổ biến nhất trong Python, chúng cho phép vẽ biểu đồ và đồ thị từ kết quả phân tích được. Nếu chúng ta chỉ hiểu dự liệu thông qua bảng số thì rất khó khăn, vì vậy việc trực quan hóa những bảng biểu này có thể giúp chúng ta quan sát và dễ dàng rút ra kết luận.
+
+### 4.3.2. Ví dụ minh họa với Matplotlib/ Seaborn 
+
+#### Ví dụ 1: Biểu đồ cột:
+
+```python
+import matplotlib.pyplot as plt
+
+names = ["An", "Bình", "Chi", "Dũng"]
+salary = [500, 1200, 800, 1500]
+
+plt.bar(names, salary)
+plt.xlabel("Tên")
+plt.ylabel("Lương")
+plt.title("So sánh lương theo từng người")
+plt.show()
+```
+
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_195332_581151ab.png" alt="" width="700">
+  <figcaption><em></em></figcaption>
+</figure>
+ 
+
+#### Ví dụ 2: Biểu độ phân bố theo lương:
+
+```python
+import seaborn as sns
+
+sns.histplot(salary, bins=10)
+plt.title("Phân bố mức lương")
+
+plt.show()
+```
+
+Kết quả nhận được:
+
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_195352_9eb71cd1.png" alt="" width="700">
+  <figcaption><em></em></figcaption>
+</figure>
+ 
+
+# 4.4. Scikit-learn – Thư viện Machine Learning cơ bản
+
+## 4.4.1. Scikit-learn là gì? Dùng khi nào?
+
+Scikit-learn (sklearn) là thư viện Machine Learning phổ biến nhất trong Python, cung cấp sẵn các **thuật toán ML cơ bản** và các **công cụ hỗ trợ toàn bộ quá trình huấn luyện mô hình**.
+
+Scikit-learn thường được dùng khi:
+
+- Dữ liệu đã được **làm sạch và chuyển về dạng số** (bằng NumPy, Pandas)
+- Cần **train, đánh giá và so sánh model** nhanh chóng
+- Làm các bài toán Machine Learning cổ điển:
+  - Regression (hồi quy)
+  - Classification (phân loại)
+  - Clustering (phân cụm)
+
+ 
+
+## 4.4.2. Quy trình Machine Learning cơ bản với Scikit-learn
+
+Một bài toán Machine Learning cơ bản với Scikit-learn thường gồm các bước:
+
+1. Chuẩn bị dữ liệu (X, y)
+2. Chia tập train / test
+3. Chọn mô hình
+4. Train mô hình
+5. Đánh giá kết quả
+
+---
+
+## 4.4.3. Ví dụ minh họa với Scikit-learn
+
+### Ví dụ 1: Bài toán hồi quy tuyến tính (Linear Regression)
+
+Dự đoán **lương theo tuổi** (ví dụ minh họa đơn giản).
+
+```python
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Dữ liệu
+X = np.array([[22], [35], [28], [42]])  # tuổi
+y = np.array([500, 1200, 800, 1500])    # lương
+
+# Tạo model
+model = LinearRegression()
+
+# Train model
+model.fit(X, y)
+
+# Dự đoán
+pred = model.predict([[30]])
+print(pred)
+```
+
+ 
+
+### Ví dụ 2: Bài toán phân loại (Classification)
+
+Ví dụ đơn giản: phân loại **đậu / rớt** dựa trên điểm số.
+
+```python
+from sklearn.linear_model import LogisticRegression
+
+# Dữ liệu
+X = [[5], [6], [7], [8], [9]]
+y = [0, 0, 0, 1, 1]  # 0: rớt, 1: đậu
+
+model = LogisticRegression()
+model.fit(X, y)
+
+print(model.predict([[7.5]]))
+```
+
+---
+# Chương 5: Các khóa học Machine Learning cho người mới bắt đầu
 
 Nhân tiện, cho những bạn đang cần một khóa học với lộ trình rõ ràng, được hướng dẫn một cách bài bản, nhưng lại không biết bắt đầu từ đâu, không muốn bản thân bị choáng ngợp với lượng lớn kiến thức.
 
@@ -287,7 +535,7 @@ Chúng mình sẽ giới thiệu cho bạn những khóa học **Machine Learnin
 
  
 
-## 4.1. Machine Learning Specialization – Andrew Ng  
+## 5.1. Machine Learning Specialization – Andrew Ng  
 **(DeepLearning.AI / Coursera)**
 
 Đây gần như là lựa chọn an toàn nhất cho những ai vừa mới bắt đầu muốn tìm hiểu về Machine Learning. Bộ khoá học này được xây lại và mở rộng thành **3 khoá** (thay vì 1 khoá ML cổ điển trước đây), đi từ nền tảng đến các chủ đề quan trọng mà bạn sẽ gặp trong thực tế. Kèm theo đó là rất nhiều bài thực hành, theo từng phần, từng lộ trình rõ ràng, giúp bạn có thể hiểu lý thuyết ngay sau khi học.
@@ -303,7 +551,7 @@ Khóa học này được thiết kế phù hợp cho:
 
  
 
-## 4.2. Google Machine Learning Crash Course (MLCC) – *Free*
+## 5.2. Google Machine Learning Crash Course (MLCC) – *Free*
 
 Nếu bạn đã có một chút nền tảng về Python và muốn tăng tốc nhanh, thì **MLCC** là một lựa chọn cực kì phù hợp. Đây là một khóa học nhanh, vừa học vừa kết hợp thực hành, và cũng dễ bắt nhịp khi Google thiết kế giúp bạn hiểu nhanh các khái niệm cốt lõi.
 
@@ -322,7 +570,7 @@ Nếu bạn đã có một chút nền tảng về Python và muốn tăng tốc
 
  
 
-## 4.3. Kaggle Learn – Intro to Machine Learning (*Free*)
+## 5.3. Kaggle Learn – Intro to Machine Learning (*Free*)
 
 Nếu bạn muốn cảm giác **học xong là làm được ngay**, Kaggle Learn sẽ là một lựa chọn đáng thử cho người mới.
 
@@ -344,12 +592,12 @@ Vì Kaggle ưu tiên thực hành nhanh, nên khóa học sẽ **không nói qu�
 
  
 
-## 4.4. Tổng kết
+## 5.4. Tổng kết
 
 Tóm lại, nếu bạn đang bắt đầu Machine Learning, đừng cố học mọi thứ cùng lúc. Hãy chọn một lộ trình chính để đi cho chắc, và dùng một khoá thực hành để lên tay. Bạn có thể bắt đầu nhanh với **Kaggle Intro to ML**, tăng tốc nền tảng bằng **Google MLCC**, rồi xây nền móng bài bản với **Machine Learning Specialization (Andrew Ng)**. Quan trọng nhất chính là học tới đâu hãy cố gắng làm ra một project nhỏ tới đó, đừng quá tập trung vào lý thuyết. Đó là cách nhanh nhất để đạt được tiến bộ thực sự trong lĩnh vực học máy.
   
 
-# Chương 5: Dự đoán khả năng sống sót trên tàu Titanic - Từ dữ liệu thô đến mô hình hoàn chỉnh
+# Chương 6: Dự đoán khả năng sống sót trên tàu Titanic - Từ dữ liệu thô đến mô hình hoàn chỉnh
 
 Tiếp nối chuỗi bài viết về Machine Learning, hôm nay chúng ta sẽ cùng bắt tay vào một dự án thực tế kinh điển. Bạn đã bao giờ tự hỏi làm thế nào một cỗ máy có thể dự đoán được tương lai dựa trên những dữ liệu từ quá khứ? 
 
@@ -394,12 +642,12 @@ print(df.info())
 ## Bước 2: Làm sạch & Tiền xử lý dữ liệu
 
 Trong Machine Learning, có một quy tắc vàng: **Garbage In, Garbage Out** (Dữ liệu rác vào, kết quả rác ra). Máy tính không hiểu chữ "male/female" và không thể tính toán trên các ô trống (NaN).
-<figure>
-  <img src="./images/DataCleaning.jpg" 
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_195720_7e17c6bd.jpg" 
        alt="DataCleaning" 
        width="3999">
   <figcaption>
-    <em>Hình 5.1: Data Cleaning.</em>
+    <em>Hình 5.1: Data Cleaning </em>
   </figcaption>
 </figure>
 **Các vấn đề cần xử lý:**
@@ -444,12 +692,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 Chúng ta sẽ sử dụng mô hình **Random Forest Classifier**. Đây là một thuật toán cực kỳ mạnh mẽ và phổ biến trong Machine Learning.
 Đọc thêm về Random Forest Classifier: https://catalyst.earth/catalyst-system-files/professional-help/concepts/focus_c/oa_classif_intro_rt.html
 
-<figure>
-  <img src="./images/RandomForestClassifier.pnj.png" 
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_195645_fe966ae5.png" 
        alt="Random Forest Classifie" 
        width="999">
   <figcaption>
-    <em>Hình 5.2: Mô hình **Random Forest Classifier.</em>
+    <em>Hình 5.2: Mô hình Random Forest Classifier </em>
   </figcaption>
 </figure>
 
@@ -497,12 +745,12 @@ plt.xlabel('Dự đoán của máy')
 plt.ylabel('Thực tế')
 plt.show()
 ```
-<figure>
-  <img src="./images/Titanic.png" 
+<figure style="text-align: center;">
+  <img src="/static/uploads/20260125_195808_d8f99fba.png" 
        alt="Titanic" 
        width="531">
   <figcaption>
-    <em>Hình 5.3: Ma trận nhầm lẫn, biểu đồ phân bố.</em>
+    <em>Hình 5.3: Ma trận nhầm lẫn </em>
   </figcaption>
 </figure>
 
@@ -517,16 +765,27 @@ Hy vọng bài viết này đã giúp bạn hình dung rõ hơn về cách xây 
 
 Chúc các bạn học tốt! 🚀
 
-  
 ## Tài liệu tham khảo
 
-1. [How Do Chatbots Work? – BotsCrew](https://botscrew.com/blog/what-are-bots/)
-2. Building Vietnamese Chatbot using LLMs and RLHF – AI Vietnam
-3. [Rubric (academic) - Wikipedia](https://en.wikipedia.org/wiki/Rubric_\(academic\))
-3. [ConvoMem Benchmark: Why Your First 150 Conversations Don’t Need RAG](https://arxiv.org/html/2511.10523)
-4. [Introduction | Ragas](https://docs.ragas.io/en/v0.1.21/index.html)
-5. [OpenAI. (2024). "GPT-4 Technical Report"](https://arxiv.org/html/2511.10523)
-6. [Lewis et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"](https://arxiv.org/html/2511.10523)
-7. [Hu et al. (2021). "LoRA: Low-Rank Adaptation of Large Language Models"](https://arxiv.org/html/2511.10523)
-8. [Yao et al. (2023). "ReAct: Synergizing Reasoning and Acting in Language Models"](https://arxiv.org/html/2511.10523)
-9. [LangChain Documentation. (2024). "Building Production-Ready RAG Systems"](https://arxiv.org/html/2511.10523)
+1. **Mitchell, T. M. (1997).** *Machine Learning*. McGraw-Hill.  
+2. **Scikit-learn Developers.** [Scikit-learn: Machine Learning in Python](https://scikit-learn.org/stable/). 
+3. **The Pandas Development Team.** [pandas documentation](https://pandas.pydata.org/docs/).  
+4. **Hunter, J. D. (2007).** "Matplotlib: A 2D graphics environment". *Computing in Science & Engineering*.  
+5. **DeepLearning.AI & Andrew Ng.** [Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction).  
+6. **Google Developers.** [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course). 
+7. **Kaggle.** [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning).  
+8. **Kaggle Datasets.** [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic).  
+9. **Breiman, L. (2001).** "Random Forests". *Machine Learning*, 45(1), 5-32. 
+## Tài liệu tham khảo
+
+1. **Mitchell, T. M. (1997).** *Machine Learning*. McGraw-Hill.  
+2. **Scikit-learn Developers.** [Scikit-learn: Machine Learning in Python](https://scikit-learn.org/stable/). 
+3. **The Pandas Development Team.** [pandas documentation](https://pandas.pydata.org/docs/).  
+4. **Hunter, J. D. (2007).** "Matplotlib: A 2D graphics environment". *Computing in Science & Engineering*.  
+5. **DeepLearning.AI & Andrew Ng.** [Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction).  
+6. **Google Developers.** [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course). 
+7. **Kaggle.** [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning).  
+8. **Kaggle Datasets.** [Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic).  
+9. **Breiman, L. (2001).** "Random Forests". *Machine Learning*, 45(1), 5-32. 
+
+
