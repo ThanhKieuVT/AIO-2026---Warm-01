@@ -9,7 +9,14 @@ Given a dataset $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^{N}$, where:
 
 * $x_i \in \mathbb{R}^{H \times W \times C}$: The input image (in this project, images are resized to $128 \times 128 \times 3$).
 * $y_i \in \{0, 1\}$: The corresponding label (0: Cat, 1: Dog).
-
+<figure style="text-align: center;">
+  <img src="/static/uploads/image/dogcat.png" 
+       alt="dogcat" 
+       width="999">
+  <figcaption>
+    <em>Hình 1.1 Cats vs. Dogs Classification </em>
+  </figcaption>
+</figure>
 The objective is to train a mapping function $f(x; \theta)$ (a CNN model with parameters $\theta$) such that the prediction $\hat{y} = f(x)$ minimizes the **Loss Function** over the dataset.
 
 ## 2. Why Choose CNN?
