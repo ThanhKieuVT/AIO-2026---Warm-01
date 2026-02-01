@@ -120,7 +120,7 @@ The combination of `ReduceLROnPlateau` and our optimizer choice created a dynami
 
 ## 6. Error Analysis
 
-To better understand the model's limitations, we performed a detailed analysis of the misclassified cases.
+To better understand the model's limitations, we performed a detailed analysis of the misclassified cases after training with 30 epochs.
 
 <figure style="text-align: center;">
   <img src="../image/matrix.png" 

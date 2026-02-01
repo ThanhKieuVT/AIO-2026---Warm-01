@@ -81,7 +81,7 @@ Chiến lược đề xuất đã mang lại sự hội tụ mượt mà và ổ
 
  
 
-## 6. Phân Tích Lỗi (Error Analysis)
+## 6. Phân Tích Lỗi 
 
 Để hiểu rõ hơn về các hạn chế của mô hình, chúng tôi đã thực hiện phân tích chi tiết các trường hợp dự đoán sai.
 
