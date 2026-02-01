@@ -2,7 +2,7 @@
 
 Trong phần này, chúng ta sẽ đi sâu vào phương pháp giải quyết bài toán phân loại chó mèo (**Cats vs. Dogs Classification**). Thay vì sử dụng các thuật toán Machine Learning truyền thống (như SVM hay KNN) vốn gặp hạn chế lớn khi xử lý dữ liệu phi cấu trúc, dự án này áp dụng **Mạng Nơ-ron Tích chập (Convolutional Neural Networks - CNN)** – xương sống của thị giác máy tính hiện đại.
 
-## 1. Định nghĩa Bài toán (Problem Formulation)
+## 1. Định nghĩa Bài toán 
 
 Bài toán được định nghĩa là **Binary Classification** (Phân loại nhị phân).
 Cho tập dữ liệu $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^{N}$, trong đó:
@@ -37,7 +37,7 @@ Mạng nơ-ron truyền thống (**Fully Connected Networks - MLP**) gặp hai v
 * **Parameter Sharing:** Dùng chung một bộ lọc (filter) quét qua toàn bộ ảnh, giúp giảm đáng kể số lượng tham số.
 * **Translation Invariance:** Khả năng nhận diện đối tượng dù nó nằm ở vị trí nào trong ảnh [1].
 
-## 3. Cấu trúc chi tiết của Mô hình (Model Architecture)
+## 3. Cấu trúc chi tiết của Mô hình 
 
 Mô hình được thiết kế theo kiến trúc **Sequential**, bao gồm hai phần chính: **Feature Extractor** (Trích xuất đặc trưng) và **Classifier** (Bộ phân loại).
 
@@ -103,7 +103,7 @@ $$
 
 * **Optimizer:** Sử dụng **Adam** (Adaptive Moment Estimation). Đây là thuật toán tối ưu phổ biến nhất hiện nay nhờ khả năng tự điều chỉnh learning rate cho từng tham số, giúp hội tụ nhanh hơn SGD truyền thống [4].
 
-## 5. Tổng kết Kiến trúc (Summary)
+## 5. Tổng kết Kiến trúc 
 
 Dưới đây là bảng tóm tắt kiến trúc mô hình đề xuất cho dự án (tương thích với input size 128 trong code):
 
