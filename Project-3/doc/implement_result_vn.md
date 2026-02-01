@@ -1,6 +1,7 @@
 # Huấn Luyện và Đánh Giá CNN: Góc Nhìn Học Thuật và Thực Tiễn
 *Bài viết này đi sâu vào quy trình huấn luyện Mạng Nơ-ron Tích chập (CNN) một cách nghiêm ngặt, không chỉ dừng lại ở các chỉ số đơn giản mà tập trung vào tính ổn định, khả năng tổng quát hóa và hiệu quả kiến trúc.*
----
+
+
 ## 1. Động Lực và Nguyên Tắc Huấn Luyện
 Trong các bài toán phân loại hình ảnh—ví dụ như phân biệt giữa Chó và Mèo, chúng ta rất dễ bị đánh lừa bởi một chỉ số duy nhất: **độ chính xác trên tập huấn luyện**. Một mô hình có thể dễ dàng đạt độ chính xác 99% bằng cách đơn giản là "học vẹt" bộ dữ liệu, nhưng lại thất bại thảm hại khi gặp hình ảnh mới.
  
@@ -12,19 +13,23 @@ Trong các bài toán phân loại hình ảnh—ví dụ như phân biệt gi�
     <em>Hình 1: So sánh giữa Tổng quát hóa (trái) và Overfitting (phải). Mô hình tốt sẽ tìm ra ranh giới mượt mà phân tách phần lớn dữ liệu, trong khi mô hình Overfitting cố gắng "học vẹt" từng điểm mút, tạo ra đường ranh giới phức tạp và không hiệu quả.</em>
   </figcaption>  
 </figure>
+
 Do đó, nguyên tắc chủ đạo trong phương pháp huấn luyện của chúng tôi rất đơn giản nhưng cực kỳ quan trọng:
-> **"Một mô hình tốt là mô hình hội tụ ổn định và có khả năng tổng quát hóa đáng tin cậy trên dữ liệu chưa từng thấy."**
+ **"Một mô hình tốt là mô hình hội tụ ổn định và có khả năng tổng quát hóa đáng tin cậy trên dữ liệu chưa từng thấy."**
 Nguyên tắc này chi phối mọi quyết định của người huấn luyện, từ chiến lược đánh giá đến các kỹ thuật tối ưu hóa.
----
+ 
 ## 2. Chiến Lược Đánh Giá
 Để đảm bảo mô hình học được các mẫu có ý nghĩa thay vì học nhiễu, nhóm đã triển khai hai chiến lược động chính trong quá trình huấn luyện.
+
 ### 2.1 EarlyStopping: Ngăn Chặn Overfitting Từ Trong Thiết Kế
 Nhóm không dựa hoàn toàn vào một số lượng epoch cố định. Thay vào đó, nhóm sử dụng **EarlyStopping** để giám sát hàm mất mát  trên tập validation.
+
 *   **Cơ chế:** Nếu validation loss không cải thiện trong **10 epoch liên tiếp** (patience = 10), quá trình huấn luyện sẽ dừng lại.
 *   **Khôi phục:** Trọng số (weights) từ epoch tốt nhất sẽ được tự động khôi phục.
 **Tại sao điều này quan trọng:**
 1.  **Tổng quát hóa:** Nó ngăn mạng nơ-ron trước khi nó bắt đầu "học thuộc lòng" dữ liệu huấn luyện.
 2.  **Hiệu quả:** Tiết kiệm tài nguyên tính toán bằng cách tránh các chu kỳ huấn luyện không cần thiết.
+
 ### 2.2 ReduceLROnPlateau: Tinh Chỉnh Thích Ứng
 Việc huấn luyện mô hình giống như việc đi xuống núi. Lúc đầu, bạn bước những bước dài (learning rate lớn), nhưng khi đến gần đích (điểm cực tiểu), bạn cần những bước nhỏ và cẩn thận hơn.
  
@@ -36,11 +41,14 @@ Việc huấn luyện mô hình giống như việc đi xuống núi. Lúc đầ
     <em>Hình 2: Chiến lược "Xuống núi" với Adaptive Learning Rate. Ban đầu chúng ta đi những bước lớn (High Learning Rate) để xuống nhanh, nhưng khi gần đến đích, chúng ta cần những bước nhỏ để tinh chỉnh chính xác vào điểm cực tiểu.</em>
   </figcaption>  
 </figure>
+
+
 Nhóm áp dụng **ReduceLROnPlateau** để tự động giảm tốc độ học (learning rate) khi hiệu suất trên tập validation bị chững lại. Điều này cho phép bộ tối ưu hóa (optimizer):
 *   Thoát khỏi các điểm cực tiểu cục bộ nông (shallow local minima).
 *   Tinh chỉnh không gian tham số với độ chính xác cao.
 *Về mặt thực nghiệm, đây là yếu tố then chốt để đạt được thêm 1-2% độ chính xác cuối cùng.*
----
+
+
 ## 3. Cấu Hình Huấn Luyện
 Khả năng tái lập là nền tảng của tính toán khoa học. Dưới đây là cấu hình tiêu chuẩn nhưng mạnh mẽ được sử dụng để đạt được kết quả của chúng tôi:
 | Thành phần | Lựa chọn | Lý do |
@@ -49,7 +57,9 @@ Khả năng tái lập là nền tảng của tính toán khoa học. Dưới đ
 | **Initial Learning Rate** | 0.001 | Điểm khởi đầu tiêu chuẩn cho tốc độ hội tụ. |
 | **Loss Function** | Binary Crossentropy | Chuẩn mực toán học cho phân loại nhị phân. |
 | **Metric** | Accuracy | Thước đo hiệu suất trực quan. |
----
+
+
+
 ## 4. Kết Quả Thực Nghiệm
 Chiến lược đề xuất đã mang lại sự hội tụ mượt mà và ổn định. Các kết quả định lượng đã tự nói lên điều đó:
 | Tập dữ liệu | Độ chính xác (Accuracy) |
@@ -99,7 +109,8 @@ Hình 5 dưới đây minh họa một trường hợp cụ thể:
   </figcaption>  
 </figure>
 
----
+
+
 
 ## 7. Hướng Đi Tương Lai
 
