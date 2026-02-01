@@ -2,14 +2,14 @@
 
 *This post explores the rigorous process of training a Convolutional Neural Network (CNN), moving beyond simple metrics to focus on stability, generalization, and architectural efficiency.*
 
----
+ 
 
 ## 1. Motivation and Training Philosophy
 
 In image classification tasks—such as distinguishing between Cats and Dogs, we are easily misled by a single metric: **training accuracy**. A model can easily achieve 99% training accuracy by simply "memorizing" the dataset, yet fail spectacularly on new images.
 
 <figure style="text-align: center;">
-  <img src="image/generalization_vs_overfitting.png" 
+  <img src="../image/generalization_vs_overfitting.png" 
        alt="Generalization vs. Overfitting" 
        width="700">
   <figcaption>
@@ -23,7 +23,7 @@ Therefore, the guiding principle of our training approach is simple but critical
 
 This philosophy dictates every choice we make, from evaluation strategies to optimization techniques.
 
----
+ 
 
 ## 2. Evaluation Strategy
 
@@ -44,7 +44,7 @@ We don't purely rely on a fixed number of epochs. Instead, we use **EarlyStoppin
 Learning a model is like descending a mountain. At first, you take big steps (large learning rate), but as you get closer to the destination (the minimum), you need to take smaller, more careful steps.
 
 <figure style="text-align: center;">
-  <img src="image/loss_landscape_adaptive_lr.png" 
+  <img src="../image/loss_landscape_adaptive_lr.png" 
        alt="Loss Landscape Strategy" 
        width="700">
   <figcaption>
@@ -58,7 +58,7 @@ We applied **ReduceLROnPlateau** to automatically lower the learning rate when v
 
 *Empirically, this was the key factor in squeezing out that final 1-2% of accuracy.*
 
----
+ 
 
 ## 3. Training Configuration
 
@@ -71,7 +71,7 @@ Reproducibility is the bedrock of scientific computing. Here is the standard yet
 | **Loss Function** | Binary Crossentropy | The mathematical standard for binary classification. |
 | **Metric** | Accuracy | Intuitive measure of performance. |
 
----
+ 
 
 ## 4. Experimental Results
 
@@ -84,7 +84,7 @@ The proposed strategy resulted in smooth, stable convergence. The quantitative r
 | **Testing** | **95.08%** |
 
 <figure style="text-align: center;">
-  <img src="image/loss.png" 
+  <img src="../image/loss.png" 
        alt="Learning Curves" 
        width="700">
   <figcaption>
@@ -94,7 +94,7 @@ The proposed strategy resulted in smooth, stable convergence. The quantitative r
 
 **Key Takeaway:** The minimal gap (~0.5%) between Training and Validation accuracy is the hallmark of effective **generalization**. The model hasn't just memorized the cats and dogs; it understands what they look like.
 
----
+ 
 
 ## 5. Analysis: Why the Model Performs Well
 
@@ -116,14 +116,14 @@ A model of this capacity would normally overfit. We prevented this using a "thre
 ### 5.3 Adaptive Optimization
 The combination of `ReduceLROnPlateau` and our optimizer choice created a dynamic training schedule. The initial phase focused on rapid descent, while the later phase emphasized fine-grained convergence.
 
----
+ 
 
 ## 6. Error Analysis
 
 To better understand the model's limitations, we performed a detailed analysis of the misclassified cases.
 
 <figure style="text-align: center;">
-  <img src="image/matrix.png" 
+  <img src="../image/matrix.png" 
        alt="Confusion Matrix" 
        width="700">
   <figcaption>
@@ -138,16 +138,14 @@ Figure 4 displays the model's confusion matrix. Currently, there remain some mis
 Figure 5 below illustrates a specific example:
 
 <figure style="text-align: center;">
-  <img src="image/classife_dog.png" 
+  <img src="../image/classife_dog.png" 
        alt="Misclassified Dog Example" 
        width="700">
   <figcaption>
     <em>Figure 5: An example of a Dog misclassified as a Cat due to confusing camera angles or unclear visual features.</em>
   </figcaption>  
 </figure>
-
----
-
+ 
 ## 7. Future Directions
 
 While ~95% accuracy is excellent, there is always room for improvement. The next steps in our research roadmap include:

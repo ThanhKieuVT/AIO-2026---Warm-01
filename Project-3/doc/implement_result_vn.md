@@ -67,9 +67,9 @@ Chiến lược đề xuất đã mang lại sự hội tụ mượt mà và ổ
   </figcaption>  
 </figure>
 
-**Điểm nhấn:** Khoảng cách rất nhỏ (~0.5%) giữa độ chính xác Training và Validation là dấu hiệu của sự **tổng quát hóa** hiệu quả. Mô hình không chỉ nhớ chó và mèo trông như thế nào; nó thực sự hiểu các đặc điểm của chúng.
+ Khoảng cách rất nhỏ (~0.5%) giữa độ chính xác Training và Validation là dấu hiệu của sự **tổng quát hóa** hiệu quả. Mô hình không chỉ nhớ chó và mèo trông như thế nào; nó thực sự hiểu các đặc điểm của chúng.
 
----
+ 
 
 ## 6. Phân Tích Lỗi (Error Analysis)
 
