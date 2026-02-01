@@ -1,4 +1,4 @@
-# 🧠 Methodology: Kiến trúc CNN và Giải pháp cho bài toán Phân loại Ảnh
+# Methodology: Kiến trúc CNN và Giải pháp cho bài toán Phân loại Ảnh
 
 Trong phần này, chúng ta sẽ đi sâu vào phương pháp giải quyết bài toán phân loại chó mèo (**Cats vs. Dogs Classification**). Thay vì sử dụng các thuật toán Machine Learning truyền thống (như SVM hay KNN) vốn gặp hạn chế lớn khi xử lý dữ liệu phi cấu trúc, dự án này áp dụng **Mạng Nơ-ron Tích chập (Convolutional Neural Networks - CNN)** – xương sống của thị giác máy tính hiện đại.
 
@@ -10,6 +10,16 @@ Cho tập dữ liệu $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^{N}$, trong đó:
 * $x_i \in \mathbb{R}^{H \times W \times C}$: Là hình ảnh đầu vào (trong dự án này, chúng ta resize về $128 \times 128 \times 3$).
 * $y_i \in \{0, 1\}$: Là nhãn (label) tương ứng (0: Mèo, 1: Chó).
 
+
+
+<figure style="text-align: center;">
+  <img src="/static/uploads/image/dogcat.png" 
+       alt="Random Forest Classifie" 
+       width="999">
+  <figcaption>
+    <em>Hình 1.1 Cats vs. Dogs Classification </em>
+  </figcaption>
+</figure>
 Mục tiêu là huấn luyện một hàm ánh xạ $f(x; \theta)$ (mô hình CNN với tham số $\theta$) sao cho dự đoán $\hat{y} = f(x)$ giảm thiểu hàm mất mát (**Loss Function**) trên tập dữ liệu.
 
 ## 2. Tại sao lại chọn CNN?
