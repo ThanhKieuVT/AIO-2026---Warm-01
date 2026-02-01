@@ -2,7 +2,7 @@
 
 *This post explores the rigorous process of training a Convolutional Neural Network (CNN), moving beyond simple metrics to focus on stability, generalization, and architectural efficiency.*
 
- 
+**Source Code:** [Kaggle Notebook](https://www.kaggle.com/code/thanhkieuvo/conq011-cats-vs-dogs-classification-using-cnn/edit) 
 
 ## 1. Motivation and Training Philosophy
 
@@ -153,3 +153,5 @@ While ~95% accuracy is excellent, there is always room for improvement. The next
 *   **Transfer Learning:** Initializing with pre-trained weights from giants like **VGG16** or **ResNet50**. This could potentially push accuracy beyond **98%**.
 *   **Fine-Tuning:** Gradually unfreezing the top layers of those pre-trained models to adapt them specifically to our data domain.
 *   **Advanced Data Augmentation Strategy:** Applying more complex augmentation techniques (such as Mixup, Cutout) to make the model more robust against the difficult cases analyzed in Section 6.
+
+ 

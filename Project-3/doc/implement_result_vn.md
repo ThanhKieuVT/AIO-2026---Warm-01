@@ -1,6 +1,8 @@
 # Huấn Luyện và Đánh Giá CNN: Góc Nhìn Học Thuật và Thực Tiễn
 *Bài viết này đi sâu vào quy trình huấn luyện Mạng Nơ-ron Tích chập (CNN) một cách nghiêm ngặt, không chỉ dừng lại ở các chỉ số đơn giản mà tập trung vào tính ổn định, khả năng tổng quát hóa và hiệu quả kiến trúc.*
 
+**Source Code:** [Kaggle Notebook](https://www.kaggle.com/code/thanhkieuvo/conq011-cats-vs-dogs-classification-using-cnn/edit) 
+
 
 ## 1. Động Lực và Nguyên Tắc Huấn Luyện
 Trong các bài toán phân loại hình ảnh—ví dụ như phân biệt giữa Chó và Mèo, chúng ta rất dễ bị đánh lừa bởi một chỉ số duy nhất: **độ chính xác trên tập huấn luyện**. Một mô hình có thể dễ dàng đạt độ chính xác 99% bằng cách đơn giản là "học vẹt" bộ dữ liệu, nhưng lại thất bại thảm hại khi gặp hình ảnh mới.
