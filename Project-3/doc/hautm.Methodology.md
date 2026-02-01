@@ -14,7 +14,7 @@ Cho tập dữ liệu $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^{N}$, trong đó:
 
 <figure style="text-align: center;">
   <img src="/static/uploads/image/dogcat.png" 
-       alt="Random Forest Classifie" 
+       alt="dogcat" 
        width="999">
   <figcaption>
     <em>Hình 1.1 Cats vs. Dogs Classification </em>
