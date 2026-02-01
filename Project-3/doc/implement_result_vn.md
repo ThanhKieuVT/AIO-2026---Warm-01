@@ -62,11 +62,11 @@ Khả năng tái lập là nền tảng của tính toán khoa học. Dưới đ
 
 ## 4. Kết Quả Thực Nghiệm
 Chiến lược đề xuất đã mang lại sự hội tụ mượt mà và ổn định. Các kết quả định lượng đã tự nói lên điều đó:
-| Tập dữ liệu | Độ chính xác (Accuracy) |
-| :--- | :--- |
-| **Training** | **96.11%** |
-| **Validation** | **95.68%** |
-| **Testing** | **95.08%** |
+| Tập dữ liệu | Độ chính xác (Accuracy) | Loss |
+| :--- | :--- | :--- |
+| **Training** | **95.63%** | **0.1099** |
+| **Validation** | **94.48%** | **0.1343** |
+| **Testing** | **94.40%** | **0.1434** |
  
 <figure style="text-align: center;">
   <img src="../image/loss.png" 
@@ -77,7 +77,7 @@ Chiến lược đề xuất đã mang lại sự hội tụ mượt mà và ổ
   </figcaption>  
 </figure>
 
- Khoảng cách rất nhỏ (~0.5%) giữa độ chính xác Training và Validation là dấu hiệu của sự **tổng quát hóa** hiệu quả. Mô hình không chỉ nhớ chó và mèo trông như thế nào; nó thực sự hiểu các đặc điểm của chúng.
+**Điểm nhấn:** Khoảng cách nhỏ (**~1.15%**) giữa độ chính xác Training và Validation là dấu hiệu của sự **tổng quát hóa** hiệu quả. Mô hình không chỉ nhớ chó và mèo trông như thế nào; nó thực sự hiểu các đặc điểm của chúng.
 
  
 

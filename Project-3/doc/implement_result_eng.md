@@ -77,11 +77,11 @@ Reproducibility is the bedrock of scientific computing. Here is the standard yet
 
 The proposed strategy resulted in smooth, stable convergence. The quantitative results speak for themselves:
 
-| Dataset Split | Accuracy |
-| :--- | :--- |
-| **Training** | **96.11%** |
-| **Validation** | **95.68%** |
-| **Testing** | **95.08%** |
+| Dataset Split | Accuracy | Loss |
+| :--- | :--- | :--- |
+| **Training** | **95.63%** | **0.1099** |
+| **Validation** | **94.48%** | **0.1343** |
+| **Testing** | **94.40%** | **0.1434** |
 
 <figure style="text-align: center;">
   <img src="../image/loss.png" 
@@ -92,7 +92,7 @@ The proposed strategy resulted in smooth, stable convergence. The quantitative r
   </figcaption>  
 </figure>
 
-**Key Takeaway:** The minimal gap (~0.5%) between Training and Validation accuracy is the hallmark of effective **generalization**. The model hasn't just memorized the cats and dogs; it understands what they look like.
+**Key Takeaway:** The small gap (**~1.15%**) between Training and Validation accuracy is the hallmark of effective **generalization**. The model hasn't just memorized the cats and dogs; it understands what they look like.
 
  
 
