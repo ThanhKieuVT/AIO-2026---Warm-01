@@ -97,6 +97,12 @@ Trong bài toán này, việc nhầm mèo thành chó hay chó thành mèo thư�
 
 - **F1-score**: trung bình điều hòa giữa precision và recall
 
+$$
+F1 = \frac{2*Precision*Recall}{Precision + Recall}
+$$
+
+	F1 chỉ cao khi precision và recall cùng cao, dùng khi bạn muốn model **không nhầm nhiều** và cũng **không bỏ sót nhiều**.
+
 Với bài toán cân bằng lớp như Cats vs Dogs, Precision/Recall thường được dùng để so sánh các phiên bản mô hình khi **accuracy tương đương**, và hiểu rõ mô hình đang sai theo hướng nào.
 
 ---

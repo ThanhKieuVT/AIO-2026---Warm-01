@@ -96,6 +96,12 @@ In this problem, mistaking a cat for a dog or a dog for a cat is usually equally
 
 - **F1-score**: the harmonic mean of precision and recall
 
+$$
+F1 = \frac{2*Precision*Recall}{Precision + Recall}
+$$
+
+	F1 is only high when both precision and recall are high, used when you want the model to **not make many mistakes** and also **not miss many things**.
+
 With a balanced Cats vs Dogs dataset, Precision/Recall are often used to compare different model versions when **accuracy is similar**, and to understand which direction the model’s errors lean.
 
 ---
