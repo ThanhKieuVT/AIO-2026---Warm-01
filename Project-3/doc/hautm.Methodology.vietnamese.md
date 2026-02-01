@@ -91,7 +91,7 @@ $$
 * Giá trị đầu ra $\hat{y} \in [0, 1]$ biểu thị xác suất ảnh là "Chó".
 * Nếu $\hat{y} < 0.5 \rightarrow$ Mèo, $\hat{y} \ge 0.5 \rightarrow$ Chó.
 
-> **💡 Lưu ý:** Trong code deployment, chúng ta sử dụng thêm một ngưỡng tin cậy (`CONFIDENCE_THRESHOLD = 0.7`). Nếu xác suất nằm trong khoảng $(0.3, 0.7)$, hệ thống sẽ trả về **"Unknown"**. Đây là cơ chế an toàn để tránh việc mô hình "đoán mò" khi gặp dữ liệu nhiễu.
+> **Lưu ý:** Trong code deployment, chúng ta sử dụng thêm một ngưỡng tin cậy (`CONFIDENCE_THRESHOLD = 0.7`). Nếu xác suất nằm trong khoảng $(0.3, 0.7)$, hệ thống sẽ trả về **"Unknown"**. Đây là cơ chế an toàn để tránh việc mô hình "đoán mò" khi gặp dữ liệu nhiễu.
 
 ## 4. Hàm Mất mát và Tối ưu hóa (Loss & Optimizer)
 
