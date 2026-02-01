@@ -5,7 +5,7 @@
 Trong các bài toán phân loại hình ảnh—ví dụ như phân biệt giữa Chó và Mèo, chúng ta rất dễ bị đánh lừa bởi một chỉ số duy nhất: **độ chính xác trên tập huấn luyện**. Một mô hình có thể dễ dàng đạt độ chính xác 99% bằng cách đơn giản là "học vẹt" bộ dữ liệu, nhưng lại thất bại thảm hại khi gặp hình ảnh mới.
  
 <figure style="text-align: center;">
-  <img src="image/generalization_vs_overfitting.png" 
+  <img src="../image/generalization_vs_overfitting.png" 
        alt="Generalization vs. Overfitting" 
        width="700">
   <figcaption>
@@ -29,7 +29,7 @@ Nhóm không dựa hoàn toàn vào một số lượng epoch cố định. Thay
 Việc huấn luyện mô hình giống như việc đi xuống núi. Lúc đầu, bạn bước những bước dài (learning rate lớn), nhưng khi đến gần đích (điểm cực tiểu), bạn cần những bước nhỏ và cẩn thận hơn.
  
 <figure style="text-align: center;">
-  <img src="image/loss_landscape_adaptive_lr.png" 
+  <img src="../image/loss_landscape_adaptive_lr.png" 
        alt="Loss Landscape Strategy" 
        width="700">
   <figcaption>
@@ -59,7 +59,7 @@ Chiến lược đề xuất đã mang lại sự hội tụ mượt mà và ổ
 | **Testing** | **95.08%** |
  
 <figure style="text-align: center;">
-  <img src="image/loss.png" 
+  <img src="../image/loss.png" 
        alt="Learning Curves" 
        width="700">
   <figcaption>
@@ -76,7 +76,7 @@ Chiến lược đề xuất đã mang lại sự hội tụ mượt mà và ổ
 Để hiểu rõ hơn về các hạn chế của mô hình, chúng tôi đã thực hiện phân tích chi tiết các trường hợp dự đoán sai.
 
 <figure style="text-align: center;">
-  <img src="image/matrix.png" 
+  <img src="../image/matrix.png" 
        alt="Confusion Matrix" 
        width="700">
   <figcaption>
@@ -91,7 +91,7 @@ Hình 4 thể hiện ma trận nhầm lẫn của mô hình. Hiện tại vẫn 
 Hình 5 dưới đây minh họa một trường hợp cụ thể:
 
 <figure style="text-align: center;">
-  <img src="image/classife_dog.png" 
+  <img src="../image/classife_dog.png" 
        alt="Misclassified Dog Example" 
        width="700">
   <figcaption>
